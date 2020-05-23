@@ -17,16 +17,37 @@
           </ul>
           <ul>
             <li><button type="button"><img src="img/Header/search1.svg" width="32" height="32" alt="Поиск"></button></li>
-            <!-- форма поиска -->
+              <form action="https://echo.htmlacademy.ru" metod="get">
+                <label>
+                  <input type="search" name="search" placeholder="Крем-брюле">
+                </label>
+              </form>
             <li>Вход
-              <!-- форма входа -->
-              <button type="button">Войти</button>
-              <a href="">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
+              <form action="https://echo.htmlacademy.ru" metod="post">   <!-- На сайте отображается метод get???-->
+                <div>
+                  <label area-label="Введите email">
+                    <input type="email" name="login" placeholder="email@example.com" required>
+                  </label>
+                </div>
+                <div>
+                  <label area-label="Введите пароль">
+                    <input type="password" name="password" placeholder="••••••" required>
+                  </label>
+                </div>
+                <button type="submit">Войти</button>
+                <div>
+                  <a href="">Забыли пароль?</a>
+                  <a href="">Новая регистрация</a>
+                </div>
+              </form>
             </li>
             <li>Корзина
-              <!-- форма корзины -->
-              <a href="blank.html">Оформить заказ</a>
+              <form action="https://echo.htmlacademy.ru" metod="post">
+                <label>
+                  <!-- Это тоже через js должно быть?-->
+                  <a href="blank.html">Оформить заказ</a>
+                </label>
+              </form>
             </li>
           </ul>
         </nav>
@@ -65,28 +86,28 @@
       <ul>
         <li>
           <article>
-            <a href=""><img src="img/Index/hit1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+            <a href=""><img src="img/Index/cream1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
             <p>310 ₽<span>/кг</span></p>
             <h3><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           </article>
         </li>
         <li>
           <article>
-            <a href=""><img src="img/Index/hit2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
+            <a href=""><img src="img/Index/cream2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
             <p>380 ₽<span>/кг</span></p>
             <h3><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
           </article>
         </li>
         <li>
           <article>
-            <a href=""><img src="img/Index/hit3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
+            <a href=""><img src="img/Index/cream3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
             <p>355 ₽<span>/кг</span></p>
             <h3><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           </article>
         </li>
         <li>
           <article>
-            <a href=""><img src="img/Index/hit4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
+            <a href=""><img src="img/Index/cream4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
             <p>415 ₽<span>/кг</span></p>
             <h3><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
           </article>
@@ -109,8 +130,12 @@
       <section>
         <h2>Подписка на рассылку</h2>   <!-- скрытый заголовок-->
         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <!-- форма подписки -->
-        <button type="submit">Отправить</button>
+        <form action="https://echo.htmlacademy.ru" metod="post">  <!-- На сайте отображается метод get???-->
+          <label area-label="Введите email">
+            <input type="email" name="login" placeholder="email@example.com" required>   <!-- Можно снова использовать name - login???-->
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
       <section>
         <h2>Как до нас добраться?</h2>       <!-- скрытый заголовок-->
@@ -130,7 +155,26 @@
           (с 10 до 20 ежедневно)
         </p>
         <button type="submit">Форма обратной связи</button>
-        <!-- Форма обратной связи-->
+        <button type="button">Закрыть</button>    <!-- Заменить на картинку-->
+        <form action="https://echo.htmlacademy.ru" metod="post">      <!-- На сайте отображается метод get???-->
+          <p>Мы обязательно вам ответим!</p>
+          <div>
+            <label area-label="Введите имя">
+              <input type="text" name="name" placeholder="Имя Фамилия">
+            </label>
+          </div>
+          <div>
+            <label area-label="Введите email">
+              <input type="email" name="login" placeholder="email@example.com" required>     <!-- Можно снова использовать name - login???-->
+            </label>
+          </div>
+          <div>
+            <label area-label="Оставьте комментарий">
+              <input type="text" name="feedback" placeholder="В свободной форме" required>
+            </label>
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
     <footer>
@@ -141,7 +185,7 @@
         <li><a href=""><img src="img/Footer/twitter.svg" width="32" height="32" alt="Твиттер">Твиттер</a></li>
       </ul>
       <ul aria-label="Информация">
-        <li><a href="blank.html">Для поставщиков</a></li>
+        <li><a href="blank.html"><img src="img/Footer/heart.svg" width="15" height="13" alt="Сердечко">Для поставщиков</a></li>
         <li><a href="blank.html">О производстве</a></li>
         <li><a href="blank.html">Наши документы</a></li>
         <li><a href="blank.html">Экологические стандарты</a></li>
