@@ -1,0 +1,161 @@
+@font-face {
+  font-family: roboto;
+  src: url(fonts/roboto.woff2);
+  src: url(fonts/roboto.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: robotobold;
+  src: url(fonts/robotobold.woff2);
+  src: url(fonts/robotobold.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: robotomedium;
+  src: url(fonts/robotomedium.woff2);
+  src: url(fonts/robotomedium.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --basicExtraWhite: rgba(255, 255, 255, 0.2);
+  --basicLightWhite: rgba(255, 255, 255, 0.8);
+  --basicWhite: #FFFFFF;
+  --basicLightBlack: #5A5A5A;
+  --basicBlack: #323232;
+  --basicGrey: #999999;
+  --basicLightRed: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --basicRed: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --basicLightBordo: #FBDED7;
+  --basicBordo: #F6B5A5;
+  --basicDarkBordo: #D07058;
+  --basicPink: #FFBC9E;
+  --basicDarkPink: #E84D37;
+
+  --specialBlack: #231F20;
+}
+
+/* Body */
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: var(--basicWhite);
+  background-color: #849D8F;
+}
+
+a {
+  color: var(--basicWhite);
+  text-decoration-color: var(--basicExtraWhite);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation */
+
+header {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.siteNavigation {
+  list-style: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.catalogItems {
+  list-style: none;
+}
+
+.userNavigation {
+  list-style: none;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contactInformation {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+/* Special offers*/
+
+.advertisment {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.offers {
+  list-style: none;
+}
+
+.offers h3 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.offers p {
+  font-size: 18px;
+}
+
+.jamOffer {
+  background-image: url("../img/index/malina.jpg");
+  width: 560px;
+  height: 229px;
+  background-color: inherit;
+  border-radius: 16px;
+}
+
+.chokolateOffer {
+  background-image: url("../img/index/chokolate.jpg");
+  width: 560px;
+  height: 229px;
+  background-color: inherit;
+  border-radius: 16px;
+}
+
+.hits {
+  list-style: none;
+}
+
+.hits h3 {
+  font-weight: 500;
+  text-align: center;
+}
+
+.hits p {
+  font-size: 45px;
+  line-height: 45px;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.hits span {
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.aboutCompany {
+  background-image: url("../img/index/vaffel.png");
+  width: 1146px;
+  height: 306px;
+  background-color: inherit;
+  border-radius: 16px;
+}

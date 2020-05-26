@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -10,9 +12,9 @@
           <a>
             <img src="img/header/gllacy.svg" width="154" height="64" alt="Логотип магазина Глейси">
           </a>
-          <ul>
+          <ul class="siteNavigation">
             <li><a href="">Каталог</a>     <!-- Получается это же не ссылка на каталог таки? вторая страница на сливочное мороженко ведет -->
-              <ul>
+              <ul class="catalogItems">
                 <li><a href="">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="">Щербеты</a></li>
@@ -23,7 +25,7 @@
             <li><a href="blank.html">Доставка и оплата</a></li>
             <li><a href="blank.html">О компании</a></li>
           </ul>
-          <ul>
+          <ul class="userNavigation">
             <li><button type="button"><img src="img/header/search1.svg" width="32" height="32" alt="Поиск"></button></li>
               <form action="https://echo.htmlacademy.ru" metod="get">
                 <label="Поиск продукции">
@@ -62,7 +64,7 @@
         <div>
           <p>
             с 10 до 20, ежедневно
-            <a href="tel:88124502525">8 812 450-25-25</a>
+            <a class="contactInformation" href="tel:88124502525">8 812 450-25-25</a>
           </p>
         </div>
     </header>
@@ -70,7 +72,7 @@
       <h1>Магазин мороженого "Глейси"</h1>     <!-- скрытый заголовок-->
       <section>
         <h2>Выгодное предложение</h2>      <!-- скрытый заголовок-->
-        <h3>Крем-брюле и пломбир с малиновым джемом</h3>                <!-- для разных страниц разная картинка и разный текст-->
+        <h3 class="advertisment">Крем-брюле и пломбир с малиновым джемом</h3>                <!-- для разных страниц разная картинка и разный текст-->
         <a href="blank.html">Давайте оба!</a>
       </section>
       <div>
@@ -81,17 +83,17 @@
        </ul>
       </div>
       <section>
-        <ul>
-          <li><h3>Малинка даром!</h3>
+        <ul class="offers">
+          <li class="jamOffer"><h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a href="blank.html">Хочу варенье!</a></li>
-          <li><h3>Шоколадки даром!</h3>
+          <li class="chokolateOffer"><h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a href="blank.html">Хочу шоколадки!</a></li>
         </ul>
       </section>
       <h2>Хиты продаж</h2>       <!-- скрытый заголовок-->
-      <ul>
+      <ul class="hits">
         <li>
           <article>
             <a href=""><img src="img/index/cream1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
@@ -121,7 +123,7 @@
           </article>
         </li>
       </ul>
-      <section>
+      <section class="aboutCompany">
         <h2>О магазине Глейси</h2>  <!-- скрытый заголовок-->
         <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</p>
         <ul>
