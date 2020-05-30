@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси, каталог</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -26,21 +28,18 @@
           <ul>
             <li><button type="button"><img src="img/header/search1.svg" width="32" height="32" alt="Поиск"></button></li>
               <form action="https://echo.htmlacademy.ru" metod="get">
-                <label>Поиск продукции
-                  <input type="search" name="search" placeholder="Крем-брюле">
-                </label>
+                <label for="search-name">Поиск продукции</label>
+                <input type="search" name="search" placeholder="Крем-брюле">
               </form>
             <li>Вход
               <form action="https://echo.htmlacademy.ru" metod="post">
                 <div>
-                  <label>Введите email
-                    <input type="email" name="login" placeholder="email@example.com" required>
-                  </label>
+                  <label for="entrance-login">Введите email</label>
+                  <input type="email" name="login" placeholder="email@example.com" required>
                 </div>
                 <div>
-                  <label>Введите пароль
-                    <input type="password" name="password" placeholder="••••••" required>
-                  </label>
+                  <label for="entrance-password">Введите пароль</label>
+                  <input type="password" name="password" placeholder="••••••" required>
                 </div>
                 <button type="submit">Вход</button>
                 <div>
@@ -70,22 +69,22 @@
       </ul>
       <h1>Сливочное мороженое</h1>
       <div>
-        <p>Сортировка:</p>
         <form action="https://echo.htmlacademy.ru" metod="get">
-          <div>
-            <select name="sortingPrinciple" size="1">
-              <option name="popular">по популярности</option>
-              <option name="cheap">сначала недорогие</option>
-              <option name="expensive">сначала дорогие</option>
-              <option name="fatContent">по жирности</option>
-            </select>
-          </div>
-          <div>
-            <p>Цена: 100 ₽ – 500 ₽</p>
+        <fieldset>
+        <legend>Сортировка:</legend>
+          <select name="sortingPrinciple" size="1">
+            <option name="popular">по популярности</option>
+            <option name="cheap">сначала недорогие</option>
+            <option name="expensive">сначала дорогие</option>
+            <option name="fatContent">по жирности</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Цена: 100 ₽ – 500 ₽</legend>
             <div></div>
             <div></div>
             <div></div>
-          </div>
+        </fieldset>
         <fieldset>
         <legend>Жирность:</legend>
           <ul>

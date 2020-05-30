@@ -12,7 +12,7 @@
           <a>
             <img src="img/header/gllacy.svg" width="154" height="64" alt="Логотип магазина Глейси">
           </a>
-          <ul class="siteNavigation">
+          <ul class="site-navigation">
             <li><a href="">Каталог</a>     <!-- Получается это же не ссылка на каталог таки? вторая страница на сливочное мороженко ведет -->
               <ul class="catalogItems">
                 <li><a href="">Новинки</a></li>
@@ -25,24 +25,21 @@
             <li><a href="blank.html">Доставка и оплата</a></li>
             <li><a href="blank.html">О компании</a></li>
           </ul>
-          <ul class="userNavigation">
+          <ul class="user-navigation">
             <li><button type="button"><img src="img/header/search1.svg" width="32" height="32" alt="Поиск"></button></li>
               <form action="https://echo.htmlacademy.ru" metod="get">
-                <label>Поиск продукции
-                  <input type="search" name="search" placeholder="Крем-брюле">
-                </label>
+                <label for="search-name">Поиск продукции</label>
+                <input id ="search-name" type="search" name="search" placeholder="Крем-брюле">
               </form>
             <li>Вход
               <form action="https://echo.htmlacademy.ru" metod="post">
                 <div>
-                  <label>Введите email
-                    <input type="email" name="login" placeholder="email@example.com" required>
-                  </label>
+                  <label for="entrance-login">Введите email</label>
+                  <input id="entrance-login" type="email" name="login" placeholder="email@example.com" required>
                 </div>
                 <div>
-                  <label>Введите пароль
-                    <input type="password" name="password" placeholder="••••••" required>
-                  </label>
+                  <label for="entrance-password">Введите пароль</label>
+                  <input id="entrance-password" type="password" name="password" placeholder="••••••" required>
                 </div>
                 <button type="submit">Войти</button>
                 <div>
@@ -64,7 +61,7 @@
         <div>
           <p>
             с 10 до 20, ежедневно
-            <a class="contactInformation" href="tel:88124502525">8 812 450-25-25</a>
+            <a class="contact-information" href="tel:88124502525">8 812 450-25-25</a>
           </p>
         </div>
     </header>
@@ -84,10 +81,10 @@
       </div>
       <section>
         <ul class="offers">
-          <li class="jamOffer"><h3>Малинка даром!</h3>
+          <li class="jam-offer"><h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a href="blank.html">Хочу варенье!</a></li>
-          <li class="chokolateOffer"><h3>Шоколадки даром!</h3>
+          <li class="chokolate-offer"><h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a href="blank.html">Хочу шоколадки!</a></li>
         </ul>
@@ -123,7 +120,7 @@
           </article>
         </li>
       </ul>
-      <section class="aboutCompany">
+      <section class="about-company">
         <h2>О магазине Глейси</h2>  <!-- скрытый заголовок-->
         <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</p>
         <ul>
@@ -141,9 +138,8 @@
         <h2>Подписка на рассылку</h2>   <!-- скрытый заголовок-->
         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form action="https://echo.htmlacademy.ru" metod="post">
-          <label>Введите email
-            <input type="email" name="login" placeholder="email@example.com" required>
-          </label>
+          <label for="mailing-login">Введите email</label>
+          <input id="mailing-login" type="email" name="login" placeholder="email@example.com" required>
           <button type="submit">Отправить</button>
         </form>
       </section>
@@ -169,19 +165,16 @@
         <form action="https://echo.htmlacademy.ru" metod="post">
           <p>Мы обязательно вам ответим!</p>
           <div>
-            <label>Введите Ваше имя
-              <input type="text" name="name" placeholder="Имя Фамилия">
-            </label>
+            <label for="feedback-name">Введите Ваше имя</label>
+            <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
           </div>
           <div>
-            <label>Введите email
-              <input type="email" name="login" placeholder="email@example.com" required>
-            </label>
+            <label for="feedback-login">Введите email</label>
+            <input id="feedback-login" type="email" name="login" placeholder="email@example.com" required>
           </div>
           <div>
-            <label>Оставьте комментарий
-              <textarea rows="10" cols="45" name="feedback" placeholder="В свободной форме" required></textarea>
-            </label>
+            <label for="feedback-commentary">Оставьте комментарий</label>
+            <textarea rows="10" cols="45" name="feedback" placeholder="В свободной форме" required></textarea>
           </div>
           <button type="submit">Отправить</button>
         </form>
