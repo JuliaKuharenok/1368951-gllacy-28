@@ -14,7 +14,7 @@
           </a>
           <ul class="site-navigation">
             <li><a href="">Каталог</a>     <!-- Получается это же не ссылка на каталог таки? вторая страница на сливочное мороженко ведет -->
-              <ul class="catalogItems">
+              <ul class="catalog-items">
                 <li><a href="">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="">Щербеты</a></li>
@@ -26,13 +26,13 @@
             <li><a href="blank.html">О компании</a></li>
           </ul>
           <ul class="user-navigation">
-            <li><button type="button"><img src="img/header/search1.svg" width="32" height="32" alt="Поиск"></button></li>
-              <form action="https://echo.htmlacademy.ru" metod="get">
+            <li><button type="button" class="search-button"><img src="img/header/search1.svg" width="32" height="32" alt="Поиск"></button></li>
+              <form class="search-form" action="https://echo.htmlacademy.ru" metod="get">
                 <label for="search-name">Поиск продукции</label>
                 <input id ="search-name" type="search" name="search" placeholder="Крем-брюле">
               </form>
             <li>Вход
-              <form action="https://echo.htmlacademy.ru" metod="post">
+              <form class="entrance-form" action="https://echo.htmlacademy.ru" metod="post">
                 <div>
                   <label for="entrance-login">Введите email</label>
                   <input id="entrance-login" type="email" name="login" placeholder="email@example.com" required>
@@ -49,28 +49,34 @@
               </form>
             </li>
             <li>Корзина
-              <form action="https://echo.htmlacademy.ru" metod="post">
-                <label>
-                  <!-- Это тоже через js должно быть?-->
-                  <a href="blank.html">Оформить заказ</a>
-                </label>
-              </form>
+              <div class="visually-hidden">
+                <button type="submit">Удалить</button>
+                <p><img src="img/catalog/icecream1.jpg" width="33px" height="33px" alt="Пломбир с апельсиновым джемом">Пломбир с апельсиновым джемом</p>
+                <p>1,5 кг х <span>200 руб.</span></p>
+                <p>300 руб.</p>
+                <button type="submit">Удалить</button>
+                <p><img src="img/catalog/icecream3.jpg" width="33px" height="33px" alt="Клубничный пломбир с присыпкой из белого шоколада">Клубничный пломбир с присыпкой из белого шоколада</p>
+                <p>1,5 кг х <span>300 руб.</span></p>
+                <p>450 руб.</p>
+                <p>Итого: 750 руб.</p>
+                <a href="blank.html">Оформить заказ</a>
+              </div>
             </li>
           </ul>
         </nav>
         <div>
           <p>
             с 10 до 20, ежедневно
-            <a class="contact-information" href="tel:88124502525">8 812 450-25-25</a>
+            <a class="phone-number" href="tel:88124502525">8 812 450-25-25</a>
           </p>
         </div>
     </header>
     <main>
-      <h1>Магазин мороженого "Глейси"</h1>     <!-- скрытый заголовок-->
-      <section>
-        <h2>Выгодное предложение</h2>      <!-- скрытый заголовок-->
-        <h3 class="advertisment">Крем-брюле и пломбир с малиновым джемом</h3>                <!-- для разных страниц разная картинка и разный текст-->
-        <a href="blank.html">Давайте оба!</a>
+      <h1 class="visually-hidden">Магазин мороженого "Глейси"</h1>     <!-- скрытый заголовок-->
+      <section class="advertisment">
+        <h2 class="visually-hidden">Выгодное предложение</h2>      <!-- скрытый заголовок-->
+        <h3>Крем-брюле и пломбир с малиновым джемом</h3>                <!-- для разных страниц разная картинка и разный текст-->
+        <a href="blank.html" class="button">Давайте оба!</a>
       </section>
       <div>
         <ul>
@@ -83,13 +89,13 @@
         <ul class="offers">
           <li class="jam-offer"><h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a href="blank.html">Хочу варенье!</a></li>
+          <a href="blank.html" class="button">Хочу варенье!</a></li>
           <li class="chokolate-offer"><h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a href="blank.html">Хочу шоколадки!</a></li>
+          <a href="blank.html" class="button">Хочу шоколадки!</a></li>
         </ul>
       </section>
-      <h2>Хиты продаж</h2>       <!-- скрытый заголовок-->
+      <h2 class="visually-hidden">Хиты продаж</h2>       <!-- скрытый заголовок-->
       <ul class="hits">
         <li>
           <article>
@@ -121,7 +127,7 @@
         </li>
       </ul>
       <section class="about-company">
-        <h2>О магазине Глейси</h2>  <!-- скрытый заголовок-->
+        <h2 class="visually-hidden">О магазине Глейси</h2>  <!-- скрытый заголовок-->
         <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</p>
         <ul>
           <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
@@ -130,25 +136,25 @@
           <li>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
-      <article>
-        <h2>Новое в нашем блоге</h2>   <!-- скрытый заголовок-->
+      <article class="blog">
+        <h2 class="visually-hidden">Новое в нашем блоге</h2>   <!-- скрытый заголовок-->
         <a href="blank.html">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
-      <section>
-        <h2>Подписка на рассылку</h2>   <!-- скрытый заголовок-->
+      <section class="mailing">
+        <h2 class="visually-hidden">Подписка на рассылку</h2>   <!-- скрытый заголовок-->
         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form action="https://echo.htmlacademy.ru" metod="post">
           <label for="mailing-login">Введите email</label>
           <input id="mailing-login" type="email" name="login" placeholder="email@example.com" required>
-          <button type="submit">Отправить</button>
+          <button class="mailing-button" type="submit">Отправить</button>
         </form>
       </section>
       <section>
-        <h2>Как до нас добраться?</h2>       <!-- скрытый заголовок-->
+        <h2 class="visually-hidden">Как до нас добраться?</h2>       <!-- скрытый заголовок-->
         <img src="img/index/map.png" width="1200" height="430" alt="Карта как до нас добраться">
       </section>
-      <secion>
-        <h2>Контактная инфа</h2>          <!-- скрытый заголовок-->
+      <section class="contact-information">
+        <h2 class="visually-hidden">Контактная инфа</h2>          <!-- скрытый заголовок-->
         <p>
           Адрес главного офиса
           и офлайн-магазина:
@@ -161,8 +167,8 @@
           (с 10 до 20 ежедневно)
         </p>
         <button type="submit">Форма обратной связи</button>
-        <button type="button">Закрыть</button>
-        <form action="https://echo.htmlacademy.ru" metod="post">
+        <button type="button" class="visually-hidden">Закрыть</button>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" metod="post">
           <p>Мы обязательно вам ответим!</p>
           <div>
             <label for="feedback-name">Введите Ваше имя</label>
@@ -181,19 +187,19 @@
       </section>
     </main>
     <footer>
-      <ul aria-label="Соцсети">
-        <li><a href=""><img src="img/footer/facebook.svg" width="32" height="32" alt="Фейсбук">Фейсбук</a></li>
-        <li><a href=""><img src="img/footer/vk.svg" width="32" height="32" alt="Вконтакте">Вконтакте</a></li>
-        <li><a href=""><img src="img/footer/insta.svg" width="32" height="32" alt="Инста">Инста</a></li>
-        <li><a href=""><img src="img/footer/twitter.svg" width="32" height="32" alt="Твиттер">Твиттер</a></li>
+      <ul aria-label="Соцсети" class="social-networks">
+        <li><a href=""><img src="img/footer/facebook.svg" width="32" height="32" alt="Фейсбук"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li><a href=""><img src="img/footer/vk.svg" width="32" height="32" alt="Вконтакте"><span class="visually-hidden">Вконтакте</span></a></li>
+        <li><a href=""><img src="img/footer/insta.svg" width="32" height="32" alt="Инста"><span class="visually-hidden">Инста</span></a></li>
+        <li><a href=""><img src="img/footer/twitter.svg" width="32" height="32" alt="Твиттер"><span class="visually-hidden">Твиттер</span></a></li>
       </ul>
-      <ul aria-label="Информация">
-        <li><a href="blank.html"><img src="img/footer/heart.svg" width="15" height="13" alt="Сердечко">Для поставщиков</a></li>
+      <ul aria-label="Информация" class="information">
+        <li><a href="blank.html"><img src="img/footer/heart.svg" width="15" height="13" alt="Сердечко"><span>Для поставщиков</span></a></li>
         <li><a href="blank.html">О производстве</a></li>
         <li><a href="blank.html">Наши документы</a></li>
         <li><a href="blank.html">Экологические стандарты</a></li>
       </ul>
-      <div aria-label="Разработано">
+      <div aria-label="Разработано" class="developed">
         <a href="https://htmlacademy.ru"><img src="img/footer/academy.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
         <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
       </div>
