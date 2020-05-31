@@ -1,0 +1,337 @@
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/roboto.woff2);
+  src: url(../fonts/roboto.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: robotobold;
+  src: url(../fonts/robotobold.woff2);
+  src: url(../fonts/robotobold.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: robotomedium;
+  src: url(../fonts/robotomedium.woff2);
+  src: url(../fonts/robotomedium.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --basic-extra-white: rgba(255, 255, 255, 0.2);
+  --basic-light-white: rgba(255, 255, 255, 0.8);
+  --basic-white: #FFFFFF;
+  --basic-light-black: #5A5A5A;
+  --basic-black: #323232;
+  --basic-grey: #999999;
+  --basic-light-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --basic-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --basic-light-bordo: #FBDED7;
+  --basic-bordo: #F6B5A5;
+  --basic-dark-bordo: #D07058;
+  --basic-pink: #FFBC9E;
+  --basic-dark-pink: #E84D37;
+
+  --special-black: #231F20;
+}
+
+/* Body */
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: var(--basic-white);
+  background-color: #849D8F;
+}
+
+a {
+  color: var(--basic-white);
+  text-decoration-color: var(--basic-extra-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  color: var(--basic-white);
+  font-size: 18px;
+  line-height: 24px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+  font-weight: bold;
+  border: none;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 32px;
+  line-height: 44px;
+  /* padding: 10px 40px; */
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.search-form {
+  display: none;
+}
+
+.entrance-form {
+  display: none;
+}
+
+.feedback-form {
+  display: none;
+}
+
+/* Navigation */
+
+header {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.site-navigation {
+  list-style: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.catalog-items {
+  list-style: none;
+  display: none;
+}
+
+.user-navigation {
+  list-style: none;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.user-navigation .search-button {         /* кривая какая-то кнопочка выходит:( */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+}
+
+.phone-number {
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+/* Special offers*/
+
+.advertisment h3 {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.advertisment .button {
+    padding: 10px 40px;
+}
+
+.offers {
+  list-style: none;
+}
+
+.offers h3 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.offers p {
+  font-size: 18px;
+}
+
+.jam-offer {
+  background-image: url("../img/index/malina.jpg");
+  width: 560px;
+  height: 229px;
+  background-color: inherit;
+  border-radius: 16px;
+}
+
+.jam-offer .button {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 16px 22px;
+}
+
+.chokolate-offer {
+  background-image: url("../img/index/chokolate.jpg");
+  width: 560px;
+  height: 229px;
+  background-color: inherit;
+  border-radius: 16px;
+}
+
+.chokolate-offer .button {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 16px 22px;
+}
+
+.hits {
+  list-style: none;
+}
+
+.hits h3 {
+  font-weight: 500;
+}
+
+.hits p {
+  font-size: 45px;
+  line-height: 45px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.hits span {
+  font-size: 30px;
+  line-height: 35px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+/* Our Company */
+
+.about-company {
+  background-image: url("../img/index/vaffel.png");
+  width: 1146px;
+  height: 306px;
+  background-color: inherit;
+  border-radius: 16px;
+  color: var(--basic-black);
+}
+
+.about-company p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.about-company li {
+  list-style: none;
+  font-weight: normal;
+}
+
+/* Blog */
+
+.blog {
+  background-image: url("../img/index/strawberry.jpg");
+  width: 560px;
+  height: 220px;
+  background-color: inherit;
+  border-radius: 16px;
+  color: var(--basic-black);
+}
+
+.blog h2 {
+  font-weight: 500;
+  font-size: 16px;        /* Почему в данном случае по дефолту ставится не те font-size и line-height, которые прописаны в body???*/
+  line-height: 22px;
+}
+
+.blog a {
+  color: var(--basic-black);
+  text-decoration-color: var(--basic-black);
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* Mailing */
+
+.mailing {
+  background-image: url("../img/index/mail.png");
+  width: 560px;
+  height: 220px;
+  background-color: inherit;
+  border-radius: 16px;
+  color: var(--basic-light-black);
+  font-weight: normal;
+}
+
+.mailing button {
+  width: 130px;
+  height: 44px;
+}
+
+/* Contact Information */
+
+.contact-information {
+  background-color: var(--basic-white);
+  width: 303px;
+  height: 306px;
+  border-radius: 16px;
+  color: var(--basic-black);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contact-information span {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.contact-information a {
+  color: var(--basic-black);
+  text-decoration-color: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;    /* Тут тоже не наследует из body( Почему? */
+}
+
+.contact-information button {
+  width: 253px;
+  height: 43px;
+}
+
+/*  Footer */
+
+.social-networks {
+  list-style: none;
+}
+
+.information {
+  list-style: none;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.information span {
+  font-weight: bold;
+}
+
+.developed {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
