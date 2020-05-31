@@ -29,7 +29,6 @@
   --basic-light-black: #5A5A5A;
   --basic-black: #323232;
   --basic-grey: #999999;
-  --basic-light-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --basic-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --basic-light-bordo: #FBDED7;
   --basic-bordo: #F6B5A5;
@@ -46,10 +45,10 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: roboto;
+  font-family: robotobold;
   font-size: 16px;
   line-height: 22px;
-  font-weight: bold;
+  font-weight: normal;
   color: var(--basic-white);
   background-color: #849D8F;
 }
@@ -57,6 +56,12 @@ body {
 a {
   color: var(--basic-white);
   text-decoration-color: var(--basic-extra-white);
+}
+
+a:hover,
+a:focus {
+  color: var(--basic-pink);
+  text-decoration-color: rgba(232, 77, 55, 0.3);
 }
 
 img {
@@ -69,22 +74,45 @@ button {
   font-size: 18px;
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  background: var(--basic-red);
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   border-radius: 70px;
   font-weight: bold;
   border: none;
 }
 
+button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px #AC1000;
+}
+
+button:focus {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: inset 0px 2px 2px #942718;
+}
+
 .button {
   text-decoration: none;
+  font-family: roboto;
+  font-weight: bold;
   font-size: 32px;
   line-height: 44px;
-  /* padding: 10px 40px; */
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  background: var(--basic-red);
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   border-radius: 70px;
+}
+
+.button:hover {
+  color: var(--basic-white);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px #AC1000;
+}
+
+.button:focus {
+  color: var(--basic-white);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: inset 0px 2px 2px #942718;
 }
 
 .visually-hidden {
@@ -107,6 +135,14 @@ button {
   display: none;
 }
 
+.circle {
+  width: 267px;
+  height: 267px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 /* Navigation */
 
 header {
@@ -120,6 +156,29 @@ header {
   line-height: 18px;
 }
 
+.site-navigation a:hover {
+  color: var(--basic-black);
+  text-decoration: none;
+  background: var(--basic-white);
+  border-radius: 26px;
+  padding: 9px 13px;
+}
+
+.site-navigation a:focus {
+  background: #EDEDED;
+  box-shadow: inset 0px 2px 1px #696969;
+  border-radius: 26px;
+  padding: 9px 13px;
+}
+
+.on-page {
+  text-decoration: none;
+  background: #D07058;
+  border-radius: 26px;
+  padding: 9px 13px;
+  pointer-events: none;
+}
+
 .catalog-items {
   list-style: none;
   display: none;
@@ -127,6 +186,7 @@ header {
 
 .user-navigation {
   list-style: none;
+  font-family: roboto;
   font-weight: 500;
   text-decoration: none;
 }
@@ -137,6 +197,23 @@ header {
   width: 32px;
   height: 32px;
   padding: 8px;
+  border-radius: 50%;
+}
+
+.user-navigation .entrance {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 92px;
+  height: 32px;
+  text-align: center; /* Временно */
+}
+
+.user-navigation .cart {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 92px;
+  height: 32px;
+  text-align: center; /* Временно */
 }
 
 .phone-number {
@@ -145,7 +222,22 @@ header {
   line-height: 24px;
 }
 
+/* Index page */
 /* Special offers*/
+
+.index-pages {
+  list-style: none;
+}
+
+/* .index-pages a {
+  width: 21px;
+  height: 21px;
+  border: var(--basic-white);
+  border-radius: 50%;
+  text-align: center;
+  background: var(--basic-white);
+} */
+
 
 .advertisment h3 {
   font-size: 60px;
@@ -159,15 +251,21 @@ header {
 
 .offers {
   list-style: none;
+  font-family: roboto;
+  font-weight: bold;
 }
 
 .offers h3 {
   font-size: 35px;
   line-height: 41px;
+  margin-left: 16px;
+  margin-bottom: 16px;
 }
 
 .offers p {
   font-size: 18px;
+  margin-left: 16px;
+  margin-top: 16px;
 }
 
 .jam-offer {
@@ -198,21 +296,22 @@ header {
   padding: 16px 22px;
 }
 
-.hits {
+.icecream {
   list-style: none;
 }
 
-.hits h3 {
+.icecream h3 {
+  font-family: roboto;
   font-weight: 500;
 }
 
-.hits p {
+.icecream p {
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.hits span {
+.icecream span {
   font-size: 30px;
   line-height: 35px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
@@ -230,13 +329,17 @@ header {
 }
 
 .about-company p {
+  font-family: roboto;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  margin-left: 20px;
+  margin-top: 24px;
 }
 
 .about-company li {
   list-style: none;
+  font-family: roboto;
   font-weight: normal;
 }
 
@@ -252,9 +355,12 @@ header {
 }
 
 .blog h2 {
+  font-family: roboto;
   font-weight: 500;
   font-size: 16px;        /* Почему в данном случае по дефолту ставится не те font-size и line-height, которые прописаны в body???*/
   line-height: 22px;
+  margin-left: 20px;
+  margin-top: 23px;
 }
 
 .blog a {
@@ -262,6 +368,8 @@ header {
   text-decoration-color: var(--basic-black);
   font-size: 24px;
   line-height: 30px;
+  margin-left: 20px;
+  margin-top: 15px;
 }
 
 /* Mailing */
@@ -272,8 +380,20 @@ header {
   height: 220px;
   background-color: inherit;
   border-radius: 16px;
+}
+
+.mailing p {
   color: var(--basic-light-black);
-  font-weight: normal;
+  font-family: roboto;
+  margin-left: 20px;
+  margin-top: 29px;
+}
+
+.mailing label {
+  color: var(--basic-light-black);
+  font-family: roboto;
+  margin-left: 20px;
+  margin-top: 47px;
 }
 
 .mailing button {
@@ -288,16 +408,22 @@ header {
   width: 303px;
   height: 306px;
   border-radius: 16px;
+}
+
+.contact-information p {
   color: var(--basic-black);
+  font-family: roboto;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+  margin-left: 25px;
+  margin-top: 32px;
 }
 
 .contact-information span {
   font-size: 18px;
   line-height: 24px;
-  font-weight: bold;
+  font-family: robotobold;
 }
 
 .contact-information a {
@@ -305,12 +431,14 @@ header {
   text-decoration-color: none;
   font-size: 18px;
   line-height: 24px;
-  font-weight: bold;    /* Тут тоже не наследует из body( Почему? */
+  font-family: robotobold;    /* Тут тоже не наследует из body( Почему? */
 }
 
 .contact-information button {
   width: 253px;
   height: 43px;
+  margin-left: 25px;
+  margin-bottom: 31px;
 }
 
 /*  Footer */
@@ -321,17 +449,60 @@ header {
 
 .information {
   list-style: none;
-  font-weight: normal;
+  font-family: roboto;
   font-size: 13px;
   line-height: 18px;
 }
 
 .information span {
-  font-weight: bold;
+  font-family: robotobold;
 }
 
 .developed {
-  font-weight: normal;
+  font-family: roboto;
   font-size: 12px;
+  line-height: 18px;
+}
+
+/* Catalog page*/
+
+.pages-navigation {
+  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+h1 {
+  font-family: robotobold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+/* Sorting */
+
+.apply-button {
+  padding: 9px 29px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-shadow: none;
+  box-shadow: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Pages */
+
+.catalog-pages {
+  list-style: none;
+}
+
+.catalog-pages a {
+  text-decoration: none;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 18px;
 }
