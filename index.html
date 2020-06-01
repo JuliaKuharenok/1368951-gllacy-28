@@ -7,6 +7,25 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <fieldset class="visually-hidden">
+      <ul>
+        <li>
+          <label>
+            <input id="green-theme" type="radio" name="theme" value="green">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="gray-theme" type="radio" name="theme" value="grey">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="gray-theme" type="radio" name="theme" value="brown">
+          </label>
+        </li>
+      </ul>
+    </fieldset>
     <header>
         <nav>
           <a>
@@ -58,14 +77,32 @@
           </p>
         </div>
     </header>
+    <div class="two-icecream">
     <main>
       <h1 class="visually-hidden">Магазин мороженого "Глейси"</h1>
       <section class="advertisment">
         <h2 class="visually-hidden">Выгодное предложение</h2>
+        <h3>Крем-брюле и пломбир с малиновым джемом</h3>                <!-- для разных страниц разная картинка и разный текст-->
+        <a href="blank.html" class="button">Давайте оба!</a>
         <div>
-          <h3>Крем-брюле и пломбир с малиновым джемом</h3>                <!-- для разных страниц разная картинка и разный текст-->
-          <a href="blank.html" class="button">Давайте оба!</a>
+          <label for="green-theme"></label>
+          <label for="gray-theme"></label>
+          <label for="brown-theme"></label>
         </div>
+        <ul>
+          <li>
+            <h3>Крем-брюле и пломбир с малиновым джемом</h3>               <!-- Или надо было соотнести лейбл и пункт списка? -->
+            <a href="blank.html" class="button">Давайте оба!</a>
+          </li>
+          <li>
+            <h3>Шоколадный пломбир и лимонный сорбет</h3>
+            <a href="blank.html" class="button">Давайте оба!</a>
+          </li>
+          <li>
+            <h3>Пломбир с помадкой и клубничный щербет</h3>
+            <a href="blank.html" class="button">Давайте оба!</a>
+          </li>
+        </ul>
       </section>
       <div>
         <ul class="index-pages">
@@ -92,6 +129,9 @@
             <div class="circle"><a href=""><img src="img/index/cream1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a></div>
             <p>310 ₽<span>/кг</span></p>
             <h3><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+            <div class="visually-hidden">
+              <a href="" class="button">Быстрый просмотр</a>
+            </div>
           </article>
         </li>
         <li>
@@ -100,6 +140,9 @@
             <div class="circle"><a href=""><img src="img/index/cream2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a></div>
             <p>380 ₽<span>/кг</span></p>
             <h3><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
+            <div class="visually-hidden">
+              <a href="" class="button">Быстрый просмотр</a>
+            </div>
           </article>
         </li>
         <li>
@@ -108,6 +151,9 @@
             <div class="circle"><a href=""><img src="img/index/cream3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a></div>
             <p>355 ₽<span>/кг</span></p>
             <h3><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+            <div class="visually-hidden">
+              <a href="" class="button">Быстрый просмотр</a>
+            </div>
           </article>
         </li>
         <li>
@@ -116,6 +162,9 @@
             <div class="circle"><a href=""><img src="img/index/cream4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a></div>
             <p>415 ₽<span>/кг</span></p>
             <h3><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
+            <div class="visually-hidden">
+              <a href="" class="button">Быстрый просмотр</a>
+            </div>
           </article>
         </li>
       </ul>
@@ -179,6 +228,7 @@
         </form>
       </section>
     </main>
+    </div>
     <footer>
       <ul aria-label="Соцсети" class="social-networks">
         <li><a href=""><img src="img/footer/facebook.svg" width="32" height="32" alt="Фейсбук"><span class="visually-hidden">Фейсбук</span></a></li>
@@ -193,7 +243,7 @@
         <li><a href="blank.html">Экологические стандарты</a></li>
       </ul>
       <div aria-label="Разработано" class="developed">
-        <a href="https://htmlacademy.ru"><img src="img/footer/academy.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
+        <a href="https://htmlacademy.ru" class="logo"><img src="img/footer/academy.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
         <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
       </div>
     </footer>

@@ -55,13 +55,12 @@ body {
 
 a {
   color: var(--basic-white);
-  text-decoration-color: var(--basic-extra-white);
+  text-decoration: none;
 }
 
 a:hover,
 a:focus {
   color: var(--basic-pink);
-  text-decoration-color: rgba(232, 77, 55, 0.3);
 }
 
 img {
@@ -127,9 +126,12 @@ img {
   line-height: 18px;
 }
 
+.site-navigation a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
 .site-navigation a:hover {
   color: var(--basic-black);
-  text-decoration: none;
   background: var(--basic-white);
   border-radius: 26px;
   padding: 9px 13px;
@@ -143,7 +145,6 @@ img {
 }
 
 .on-page {
-  text-decoration: none;
   background: var(--basic-dark-bordo);
   border-radius: 26px;
   padding: 9px 13px;
@@ -161,7 +162,6 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  text-decoration: none;
 }
 
 .user-navigation .search-button {
@@ -220,7 +220,6 @@ img {
 }
 
 .phone-number {
-  text-decoration: none;
   font-weight: 600;
   font-size: 22px;
   line-height: 24px;
@@ -228,6 +227,14 @@ img {
 
 /* Index page */
 /* Special offers*/
+
+/* .two-icecream {         /*  Пока закомметировала, а то футер поехал наверх зачем-то*/
+  background-image: url(../img/index/twoicecream1.png);
+  width: 716px;
+  height: 716px;
+  background-repeat: no-repeat;
+  background-position: top center;  /* как тут намутить светылй фон? Я попробовала вставить картинку уже обединенную с фоном, но там прям четкая рамка у нее */
+} */
 
 .index-pages {
   list-style: none;
@@ -241,30 +248,25 @@ img {
 }
 
 .advertisment .button {
+  font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   padding: 10px 40px;
 }
 
-.advertisment div {
-  background-image: url(../img/index/twoicecream1.png);
-  width: 716px;
-  height: 716px;
-  background-repeat: no-repeat;
-}
-
 .offers {
   list-style: none;
   font-family: roboto;
-  font-weight: 600;
 }
 
 .offers h3 {
+  font-weight: 500;
   font-size: 35px;
   line-height: 41px;
 }
 
 .offers p {
+  font-weight: 500;
   font-size: 18px;
   line-height: 22px;
 }
@@ -278,6 +280,7 @@ img {
 }
 
 .jam-offer .button {
+  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   padding: 16px 22px;
@@ -292,6 +295,7 @@ img {
 }
 
 .chokolate-offer .button {
+  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   padding: 16px 22px;
@@ -321,6 +325,18 @@ img {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+.icecream a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
+.icecream a:hover,
+.icecream a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.icecream .button {
+  padding: 12px 16px;
+}
 /* Our Company */
 
 .about-company {
@@ -365,10 +381,15 @@ img {
 
 .blog a {
   color: var(--basic-black);
-  text-decoration-color: var(--basic-black);
+  border-bottom: 2px solid #353535;
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
+}
+
+.blog a:hover,
+.blog a:focus {
+  border-bottom: 2px solid rgba(255, 188, 158, 0.3);
 }
 
 /* Mailing */
@@ -435,7 +456,6 @@ img {
 a:hover,
 a:focus {
   color: var(--basic-pink);
-  text-decoration-color: rgba(232, 77, 55, 0.3);
 }
 
 .contact-information button {
@@ -461,6 +481,15 @@ a:focus {
   line-height: 18px;
 }
 
+.information a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
+.information a:hover,
+.information a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
 .information span {
   font-weight: 600;
 }
@@ -471,6 +500,24 @@ a:focus {
   line-height: 18px;
 }
 
+.developed a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
+.developed a:hover,
+.developed a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.developed .logo {
+  border-bottom: none;
+}
+
+.developed .logo:hover,
+.developed .logo:focus {
+  border-bottom: none;
+}
+
 /* Catalog page*/
 
 .pages-navigation {
@@ -478,6 +525,15 @@ a:focus {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+}
+
+.pages-navigation a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pages-navigation a:hover,
+.pages-navigation a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
 h1 {
