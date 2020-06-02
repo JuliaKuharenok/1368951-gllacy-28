@@ -1,25 +1,26 @@
 @font-face {
+  font-weight: 400;
   font-family: roboto;
-  src: url(../fonts/roboto.woff2);
-  src: url(../fonts/roboto.woff);
   font-style: normal;
-  font-weight: normal;
+  font-display: swap;
+  src: url(../fonts/roboto.woff2) format("woff2");
+  src: url(../fonts/roboto.woff) format("woff");
 }
 
 @font-face {
-  font-family: robotobold;
-  src: url(../fonts/robotobold.woff2);
-  src: url(../fonts/robotobold.woff);
+  font-weight: 500;
+  font-family: roboto;
   font-style: normal;
-  font-weight: normal;
+  src: url(../fonts/robotomedium.woff2) format("woff2");
+  src: url(../fonts/robotomedium.woff) format("woff");
 }
 
 @font-face {
-  font-family: robotomedium;
-  src: url(../fonts/robotomedium.woff2);
-  src: url(../fonts/robotomedium.woff);
+  font-weight: 600;
+  font-family: roboto;
   font-style: normal;
-  font-weight: normal;
+  src: url(../fonts/robotobold.woff2) format("woff2");
+  src: url(../fonts/robotobold.woff) format("woff");
 }
 
 :root {
@@ -29,7 +30,6 @@
   --basic-light-black: #5A5A5A;
   --basic-black: #323232;
   --basic-grey: #999999;
-  --basic-light-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --basic-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --basic-light-bordo: #FBDED7;
   --basic-bordo: #F6B5A5;
@@ -37,7 +37,9 @@
   --basic-pink: #FFBC9E;
   --basic-dark-pink: #E84D37;
 
-  --special-black: #231F20;
+  --background-green: #849D8F;
+  --background-grey: #8996A6;
+  --background-brown: #9D8B84;
 }
 
 /* Body */
@@ -47,16 +49,18 @@ body {
   margin: 0;
   padding: 0;
   font-family: roboto;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: bold;
   color: var(--basic-white);
-  background-color: #849D8F;
+  background-color: var(--background-green);
 }
 
 a {
   color: var(--basic-white);
-  text-decoration-color: var(--basic-extra-white);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--basic-pink);
 }
 
 img {
@@ -64,27 +68,25 @@ img {
   height: auto;
 }
 
-button {
-  color: var(--basic-white);
-  font-size: 18px;
-  line-height: 24px;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
-  border-radius: 70px;
-  font-weight: bold;
-  border: none;
-}
-
 .button {
   text-decoration: none;
-  font-size: 32px;
-  line-height: 44px;
-  /* padding: 10px 40px; */
+  font-weight: 600;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  background: var(--basic-red);
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   border-radius: 70px;
+}
+
+.button:hover {
+  color: var(--basic-white);
+  background: linear-gradient(0deg, var(--basic-extra-white), var(--basic-extra-white)), var(--basic-red);
+  box-shadow: 0px 2px 2px #AC1000;
+}
+
+.button:focus {
+  color: var(--basic-white);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), var(--basic-red);
+  box-shadow: inset 0px 2px 2px #942718;
 }
 
 .visually-hidden {
@@ -107,17 +109,46 @@ button {
   display: none;
 }
 
-/* Navigation */
-
-header {
-  font-size: 14px;
-  line-height: 16px;
+.circle {
+  width: 267px;
+  height: 267px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
 }
+
+/* Navigation */
 
 .site-navigation {
   list-style: none;
+  font-weight: 600;
   font-size: 16px;
   line-height: 18px;
+}
+
+.site-navigation a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
+.site-navigation a:hover {
+  color: var(--basic-black);
+  background: var(--basic-white);
+  border-radius: 26px;
+  padding: 9px 13px;
+}
+
+.site-navigation a:focus {
+  background: #EDEDED;
+  box-shadow: inset 0px 2px 1px #696969;
+  border-radius: 26px;
+  padding: 9px 13px;
+}
+
+.on-page {
+  background: var(--basic-dark-bordo);
+  border-radius: 26px;
+  padding: 9px 13px;
+  pointer-events: none;
 }
 
 .catalog-items {
@@ -127,47 +158,117 @@ header {
 
 .user-navigation {
   list-style: none;
+  font-family: roboto;
   font-weight: 500;
-  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
 }
 
-.user-navigation .search-button {         /* кривая какая-то кнопочка выходит:( */
-  background: rgba(255, 255, 255, 0.2);
+.user-navigation .search-button {
+  background: var(--basic-extra-white);
   box-shadow: none;
+  border: none;
   width: 32px;
   height: 32px;
-  padding: 8px;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.user-navigation .search-button:hover {    /* не получается поставить лупу в центр:( */
+  background: var(--basic-white);
+  background-image: url(../img/header/search2.svg);
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.user-navigation .entrance {
+  background: var(--basic-extra-white);
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.user-navigation .entrance:hover {
+  background: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.user-navigation .cart-empty {
+  background: var(--basic-extra-white);
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.user-navigation .cart-empty:hover {
+  background: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.user-navigation .cart-full {
+  background: var(--basic-white);
+  color: var(--basic-black);
+  border-radius: 20px;
+  padding: 10px 16px;
+}
+
+.open-hours {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .phone-number {
-  text-decoration: none;
+  font-weight: 600;
   font-size: 22px;
   line-height: 24px;
 }
 
+/* Index page */
 /* Special offers*/
 
+/* .two-icecream {         /*  Пока закомметировала, а то футер поехал наверх зачем-то*/
+  background-image: url(../img/index/twoicecream1.png);
+  width: 716px;
+  height: 716px;
+  background-repeat: no-repeat;
+  background-position: top center;  /* как тут намутить светылй фон? Я попробовала вставить картинку уже обединенную с фоном, но там прям четкая рамка у нее */
+} */
+
+.index-pages {
+  list-style: none;
+}
+
 .advertisment h3 {
+  font-weight: 600;
   font-size: 60px;
   line-height: 60px;
   text-align: center;
 }
 
 .advertisment .button {
-    padding: 10px 40px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  padding: 10px 40px;
 }
 
 .offers {
   list-style: none;
+  font-family: roboto;
 }
 
 .offers h3 {
+  font-weight: 500;
   font-size: 35px;
   line-height: 41px;
 }
 
 .offers p {
+  font-weight: 500;
   font-size: 18px;
+  line-height: 22px;
 }
 
 .jam-offer {
@@ -179,6 +280,7 @@ header {
 }
 
 .jam-offer .button {
+  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   padding: 16px 22px;
@@ -193,38 +295,56 @@ header {
 }
 
 .chokolate-offer .button {
+  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   padding: 16px 22px;
 }
 
-.hits {
+.icecream {
   list-style: none;
 }
 
-.hits h3 {
+.icecream h3 {
   font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
 }
 
-.hits p {
+.icecream p {
+  font-weight: 600;
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.hits span {
+.icecream span {
+  font-weight: 600;
   font-size: 30px;
   line-height: 35px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+.icecream a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
+.icecream a:hover,
+.icecream a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.icecream .button {
+  padding: 12px 16px;
+}
 /* Our Company */
 
 .about-company {
   background-image: url("../img/index/vaffel.png");
+  background-color: inherit;
+  background-repeat: repeat, no-repeat;
   width: 1146px;
   height: 306px;
-  background-color: inherit;
   border-radius: 16px;
   color: var(--basic-black);
 }
@@ -237,7 +357,9 @@ header {
 
 .about-company li {
   list-style: none;
-  font-weight: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 /* Blog */
@@ -253,15 +375,21 @@ header {
 
 .blog h2 {
   font-weight: 500;
-  font-size: 16px;        /* Почему в данном случае по дефолту ставится не те font-size и line-height, которые прописаны в body???*/
+  font-size: 16px;
   line-height: 22px;
 }
 
 .blog a {
   color: var(--basic-black);
-  text-decoration-color: var(--basic-black);
+  border-bottom: 2px solid #353535;
+  font-weight: 600;
   font-size: 24px;
   line-height: 30px;
+}
+
+.blog a:hover,
+.blog a:focus {
+  border-bottom: 2px solid rgba(255, 188, 158, 0.3);
 }
 
 /* Mailing */
@@ -272,13 +400,27 @@ header {
   height: 220px;
   background-color: inherit;
   border-radius: 16px;
+}
+
+.mailing p {
   color: var(--basic-light-black);
-  font-weight: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .mailing button {
-  width: 130px;
-  height: 44px;
+  color: var(--basic-white);
+  border: none;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 13px 19px;
+}
+
+/* Map */
+
+.map {
+  background-color: inherit;
 }
 
 /* Contact Information */
@@ -288,29 +430,38 @@ header {
   width: 303px;
   height: 306px;
   border-radius: 16px;
+}
+
+.contact-information p {
   color: var(--basic-black);
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }
 
 .contact-information span {
+  font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  font-weight: bold;
 }
 
 .contact-information a {
   color: var(--basic-black);
-  text-decoration-color: none;
+  text-decoration: none;
+  font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  font-weight: bold;    /* Тут тоже не наследует из body( Почему? */
+}
+
+a:hover,
+a:focus {
+  color: var(--basic-pink);
 }
 
 .contact-information button {
-  width: 253px;
-  height: 43px;
+  color: var(--basic-white);
+  border: none;
+  padding: 13px 28px;
 }
 
 /*  Footer */
@@ -319,19 +470,158 @@ header {
   list-style: none;
 }
 
+/* .social-networks img:hover,
+.social-networks img:focus {
+} */
+
 .information {
   list-style: none;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 18px;
 }
 
+.information a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
+.information a:hover,
+.information a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
 .information span {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .developed {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;
+  line-height: 18px;
+}
+
+.developed a {
+  border-bottom: 1px solid var(--basic-extra-white);
+}
+
+.developed a:hover,
+.developed a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.developed .logo {
+  border-bottom: none;
+}
+
+.developed .logo:hover,
+.developed .logo:focus {
+  border-bottom: none;
+}
+
+/* Catalog page*/
+
+.pages-navigation {
+  list-style: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.pages-navigation a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pages-navigation a:hover,
+.pages-navigation a:focus {
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+/* Sorting */
+
+.sorting {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sorting-principle {
+  background: var(--basic-extra-white);
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.price {
+  background: var(--basic-extra-white);
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.fat {
+  background: var(--basic-extra-white);
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.fat li {
+  list-style: none;
+}
+
+.filling {
+  background: var(--basic-extra-white);
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filling li {
+  list-style: none;
+}
+
+.apply-button {
+  padding: 9px 29px;
+  background: var(--basic-extra-white);
+  border: 2px solid var(--basic-white);
+  color: var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.apply-button:hover {
+  background: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.apply-button:focus {
+  background: var(--basic-white);
+  color: var(--basic-black);
+  box-shadow: inset 0px 2px 1px #696969; /* тень не совпадает по закруглению кнопки */
+}
+
+/* Pages */
+
+.catalog-pages {
+  list-style: none;
+}
+
+.catalog-pages a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 18px;
 }
