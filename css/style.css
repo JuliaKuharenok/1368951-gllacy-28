@@ -58,11 +58,6 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
-  color: var(--basic-pink);
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -117,9 +112,50 @@ img {
   overflow: hidden;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+  margin-bottom: 60px;
+  margin-left: 10px;
+}
+
+.main-navigation-wrapper .wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 /* Navigation */
 
 .site-navigation {
+  width: 360px;
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-weight: 600;
   font-size: 16px;
@@ -157,6 +193,9 @@ img {
 }
 
 .user-navigation {
+  width: 250px;
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-family: roboto;
   font-weight: 500;
@@ -164,8 +203,11 @@ img {
   line-height: 16px;
 }
 
-.user-navigation .search-button {
+.search-button {
   background: var(--basic-extra-white);
+  background-image: url(../img/header/search1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   box-shadow: none;
   border: none;
   width: 32px;
@@ -174,39 +216,43 @@ img {
   border-radius: 50%;
 }
 
-.user-navigation .search-button:hover {    /* не получается поставить лупу в центр:( */
+.search-button:hover {
   background: var(--basic-white);
   background-image: url(../img/header/search2.svg);
   background-repeat: no-repeat;
+  background-position: center;
   width: 32px;
   height: 32px;
   padding: 7px;
   border-radius: 50%;
 }
 
-.user-navigation .entrance {
+.entrance {
   background: var(--basic-extra-white);
   border-radius: 20px;
   padding: 8px 16px;
 }
 
-.user-navigation .entrance:hover {
+.entrance:hover {
   background: var(--basic-white);
   color: var(--basic-black);
 }
 
-.user-navigation .cart-empty {
+.cart-empty {
   background: var(--basic-extra-white);
   border-radius: 20px;
   padding: 8px 16px;
 }
 
-.user-navigation .cart-empty:hover {
-  background: var(--basic-white);
+.cart-empty a:hover {
   color: var(--basic-black);
 }
 
-.user-navigation .cart-full {
+.cart-empty:hover {
+  background: var(--basic-white);
+}
+
+.cart-full {
   background: var(--basic-white);
   color: var(--basic-black);
   border-radius: 20px;
@@ -214,9 +260,12 @@ img {
 }
 
 .open-hours {
+  display: flex;
+  justify-content: flex-end;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+  margin-top: -50px; /* это не правильно, но по другому поднять выше не вышло*/
 }
 
 .phone-number {
@@ -228,16 +277,24 @@ img {
 /* Index page */
 /* Special offers*/
 
-/* .two-icecream {         /*  Пока закомметировала, а то футер поехал наверх зачем-то*/
+.two-icecream {
   background-image: url(../img/index/twoicecream1.png);
-  width: 716px;
-  height: 716px;
   background-repeat: no-repeat;
-  background-position: top center;  /* как тут намутить светылй фон? Я попробовала вставить картинку уже обединенную с фоном, но там прям четкая рамка у нее */
-} */
+  background-position: top center;
+}
+
+.two-icecream-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .index-pages {
   list-style: none;
+}
+
+.advertisment {
+  margin-top: 275px;
 }
 
 .advertisment h3 {
@@ -245,30 +302,53 @@ img {
   font-size: 60px;
   line-height: 60px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 27px;
 }
 
 .advertisment .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;     /* До меня что-то не доходит как пофиксить теперь кнопку */
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   padding: 10px 40px;
+  margin-bottom: 50px;
 }
 
 .offers {
+  margin-bottom: 40px;
+}
+
+.offers-list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-family: roboto;
 }
 
-.offers h3 {
+.offers-list h3 {
   font-weight: 500;
   font-size: 35px;
   line-height: 41px;
+  margin: 0;
+  padding-left: 16px;
+  padding-top: 16px;
 }
 
-.offers p {
+.offers-list p {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+  margin: 0;
+  margin-bottom: 42px;
+  padding-left: 16px;
+  padding-top: 16px;
 }
 
 .jam-offer {
@@ -280,6 +360,9 @@ img {
 }
 
 .jam-offer .button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -295,6 +378,9 @@ img {
 }
 
 .chokolate-offer .button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -302,39 +388,66 @@ img {
 }
 
 .icecream {
-  list-style: none;
+  outline: 5px solid rgba(0, 250, 0, 0.3);
+  outline-offset: -5px;
 }
 
-.icecream h3 {
+.icecream-list article {
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+}
+
+.icecream-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icecream-list h3 {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
 }
 
-.icecream p {
+.icecream-list p {
+  width: 100%;
   font-weight: 600;
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  margin-top: -50px;
+  margin-bottom: 33px;
 }
 
-.icecream span {
+.icecream-list span {
   font-weight: 600;
   font-size: 30px;
   line-height: 35px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.icecream a {
+.icecream-list a {
   border-bottom: 1px solid var(--basic-extra-white);
 }
 
-.icecream a:hover,
-.icecream a:focus {
+.icecream-list a:hover,
+.icecream-list a:focus {
+  color: var(--basic-pink);
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
-.icecream .button {
+.icecream-list .button {
   padding: 12px 16px;
 }
 /* Our Company */
@@ -353,6 +466,9 @@ img {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 24px;
 }
 
 .about-company li {
@@ -363,6 +479,15 @@ img {
 }
 
 /* Blog */
+
+.blog-mailing {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 0;
+}
 
 .blog {
   background-image: url("../img/index/strawberry.jpg");
@@ -377,6 +502,10 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 23px;
+  padding-bottom: 15px;
 }
 
 .blog a {
@@ -385,10 +514,13 @@ img {
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
+  padding-left: 20px;   /* как у второй строчки отступ сделать?*/
 }
 
 .blog a:hover,
 .blog a:focus {
+  color: var(--basic-pink);
   border-bottom: 2px solid rgba(255, 188, 158, 0.3);
 }
 
@@ -407,6 +539,16 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 29px;
+  padding-right: 16px;
+  padding-bottom: 47px;
+}
+
+.mailing input {
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .mailing button {
@@ -421,6 +563,8 @@ img {
 
 .map {
   background-color: inherit;
+  margin-top: 40px;
+  width: 1200px; /* У карты нет отступа как у всего контента на сайте, я подумала задать ширину, но как ее в цент поставить теперь, или как то по другому сделать?*/
 }
 
 /* Contact Information */
@@ -437,12 +581,16 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 32px;
+  padding-left: 25px;
+  margin: 0;
 }
 
 .contact-information span {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
+  margin-top: 8px;
 }
 
 .contact-information a {
@@ -453,26 +601,25 @@ img {
   line-height: 24px;
 }
 
-a:hover,
-a:focus {
-  color: var(--basic-pink);
-}
-
 .contact-information button {
   color: var(--basic-white);
   border: none;
   padding: 13px 28px;
+  margin-top: 31px;
 }
 
 /*  Footer */
 
+.main-footer {
+  padding: 60px;
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .social-networks {
   list-style: none;
 }
-
-/* .social-networks img:hover,
-.social-networks img:focus {
-} */
 
 .information {
   list-style: none;
@@ -487,6 +634,7 @@ a:focus {
 
 .information a:hover,
 .information a:focus {
+  color: var(--basic-pink);
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
@@ -495,6 +643,10 @@ a:focus {
 }
 
 .developed {
+  display:flex;
+  flex-direction: column;
+	justify-content: flex-start;
+  align-items: flex-end;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -506,6 +658,7 @@ a:focus {
 
 .developed a:hover,
 .developed a:focus {
+  color: var(--basic-pink);
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
@@ -525,6 +678,8 @@ a:focus {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .pages-navigation a {
@@ -533,6 +688,7 @@ a:focus {
 
 .pages-navigation a:hover,
 .pages-navigation a:focus {
+  color: var(--basic-pink);
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
@@ -540,6 +696,9 @@ h1 {
   font-weight: 600;
   font-size: 35px;
   line-height: 41px;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 29px;
 }
 
 /* Sorting */
@@ -548,6 +707,7 @@ h1 {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  margin-bottom: 40px;
 }
 
 .sorting-principle {
@@ -614,12 +774,18 @@ h1 {
 }
 
 /* Pages */
-
 .catalog-pages {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 80px;
+  margin-bottom: 37px;
+}
+
+.catalog-pages-list {
   list-style: none;
 }
 
-.catalog-pages a {
+.catalog-pages-list a {
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
