@@ -129,8 +129,6 @@ img {
 
 .main-navigation {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
 }
 
 .main-navigation-wrapper {
@@ -152,8 +150,14 @@ img {
 
 /* Navigation */
 
+.main-header-logo {
+  padding-top: 9px;
+}
+
 .site-navigation {
-  width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -163,6 +167,12 @@ img {
 }
 
 .site-navigation a {
+  display: block;
+  padding-top: 25px;
+  padding-left: 32px;
+}
+
+.site-navigation span {
   border-bottom: 1px solid var(--basic-extra-white);
 }
 
@@ -171,6 +181,7 @@ img {
   background: var(--basic-white);
   border-radius: 26px;
   padding: 9px 13px;
+  margin-top: 23px;
 }
 
 .site-navigation a:focus {
@@ -178,12 +189,14 @@ img {
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
   padding: 9px 13px;
+  margin-top: 23px;
 }
 
 .on-page {
   background: var(--basic-dark-bordo);
   border-radius: 26px;
-  padding: 9px 13px;
+  padding-top: 9px;
+  padding-left: 13px;
   pointer-events: none;
 }
 
@@ -193,7 +206,9 @@ img {
 }
 
 .user-navigation {
-  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 270px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -214,6 +229,8 @@ img {
   height: 32px;
   padding: 7px;
   border-radius: 50%;
+  margin-top: 23px;
+  margin-right: 10px;
 }
 
 .search-button:hover {
@@ -227,10 +244,33 @@ img {
   border-radius: 50%;
 }
 
+.entrance::before {
+  content:"";
+  position: absolute;
+  top: 6px;
+  left: 16px;
+
+  width: 20px;
+  height: 19px;
+  background-image: url(../img/header/enter1.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.entrance:hover::before,
+.entrance:focus::before {
+  background-image: url(../img/header/enter2.svg);
+}
+
 .entrance {
   background: var(--basic-extra-white);
   border-radius: 20px;
-  padding: 8px 16px;
+  padding-top: 8px;
+  padding-left: 44px;
+  padding-right: 16px;
+  margin-top: 23px;
+  margin-right: 10px;
+  position: relative;
 }
 
 .entrance:hover {
@@ -238,52 +278,91 @@ img {
   color: var(--basic-black);
 }
 
+.cart-empty::before {
+  content:"";
+  position: absolute;
+  top: 6px;
+  left: 16px;
+
+  width: 21px;
+  height: 20px;
+  background-image: url(../img/header/bucked1.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .cart-empty {
   background: var(--basic-extra-white);
   border-radius: 20px;
-  padding: 8px 16px;
+  padding-top: 8px;
+  padding-left: 45px;
+  padding-right: 16px;
+  margin-top: 23px;
+  position: relative;
 }
 
-.cart-empty a:hover {
+/* .cart-empty a:hover {
   color: var(--basic-black);
 }
 
 .cart-empty:hover {
   background: var(--basic-white);
+} */
+
+.cart-full::after {
+  content:"";
+  position: absolute;
+  top: 6px;
+  left: 16px;
+
+  width: 21px;
+  height: 20px;
+  background-image: url(../img/header/bucked2.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .cart-full {
   background: var(--basic-white);
   color: var(--basic-black);
   border-radius: 20px;
-  padding: 10px 16px;
+  padding-top: 10px;
+  padding-left: 44px;
+  padding-right: 16px;
+  margin-top: 23px;
+  position: relative;
 }
 
 .open-hours {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
   margin-top: -50px; /* это не правильно, но по другому поднять выше не вышло*/
+  padding-top: 20px;
 }
 
 .phone-number {
   font-weight: 600;
   font-size: 22px;
   line-height: 24px;
+  padding-top: 8px;
 }
 
 /* Index page */
 /* Special offers*/
 
-.two-icecream {
+.site-wrapper {
   background-image: url(../img/index/twoicecream1.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
 
-.two-icecream-list {
+.site-wrapper-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -295,26 +374,26 @@ img {
 
 .advertisment {
   margin-top: 275px;
+  margin-bottom: 40px;
 }
 
 .advertisment h3 {
   font-weight: 600;
   font-size: 60px;
   line-height: 60px;
-  text-align: center;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 27px;
 }
 
 .advertisment .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;     /* До меня что-то не доходит как пофиксить теперь кнопку */
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   padding: 10px 40px;
-  margin-bottom: 50px;
+}
+
+.site-wrapper-list li {
+  text-align: center;
 }
 
 .offers {
@@ -323,8 +402,6 @@ img {
 
 .offers-list {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -352,6 +429,8 @@ img {
 }
 
 .jam-offer {
+  display: flex;
+  flex-direction: column;
   background-image: url("../img/index/malina.jpg");
   width: 560px;
   height: 229px;
@@ -360,16 +439,18 @@ img {
 }
 
 .jam-offer .button {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  align-self: flex-end;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   padding: 16px 22px;
+  margin-right: 22px;
+  margin-bottom: 22px;
 }
 
 .chokolate-offer {
+  display: flex;
+  flex-direction: column;
   background-image: url("../img/index/chokolate.jpg");
   width: 560px;
   height: 229px;
@@ -378,18 +459,30 @@ img {
 }
 
 .chokolate-offer .button {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  align-self: flex-end;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   padding: 16px 22px;
+  margin-right: 22px;
+  margin-bottom: 22px;
 }
 
-.icecream {
-  outline: 5px solid rgba(0, 250, 0, 0.3);
-  outline-offset: -5px;
+.hit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 200px;
+
+  width: 61px;
+  height: 61px;
+  background-image: url(../img/index/hit.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.hit {
+  position: relative;
 }
 
 .icecream-list article {
@@ -398,9 +491,6 @@ img {
 	justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
 }
 
 .icecream-list {
@@ -491,11 +581,12 @@ img {
 
 .blog {
   background-image: url("../img/index/strawberry.jpg");
-  width: 560px;
+  width: 540px;
   height: 220px;
   background-color: inherit;
   border-radius: 16px;
   color: var(--basic-black);
+  padding-left: 20px;
 }
 
 .blog h2 {
@@ -503,9 +594,12 @@ img {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
-  padding-left: 20px;
   padding-top: 23px;
   padding-bottom: 15px;
+}
+
+.blog div {
+  max-width: 287px;
 }
 
 .blog a {
@@ -515,7 +609,6 @@ img {
   font-size: 24px;
   line-height: 30px;
   margin: 0;
-  padding-left: 20px;   /* как у второй строчки отступ сделать?*/
 }
 
 .blog a:hover,
@@ -528,10 +621,12 @@ img {
 
 .mailing {
   background-image: url("../img/index/mail.png");
-  width: 560px;
-  height: 220px;
+  width: 540px;
+  height: 191px;
   background-color: inherit;
   border-radius: 16px;
+  padding-left: 20px;
+  padding-top: 29px;
 }
 
 .mailing p {
@@ -540,15 +635,13 @@ img {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
-  padding-left: 20px;
-  padding-top: 29px;
-  padding-right: 16px;
   padding-bottom: 47px;
+  max-width: 512px;
 }
 
 .mailing input {
-  margin-left: 20px;
   margin-right: 10px;
+  width: 368px;
 }
 
 .mailing button {
@@ -560,16 +653,35 @@ img {
 }
 
 /* Map */
+.map::before {
+  content: "";
+  position: absolute;
+  top: 136px;
+  left: 386px;
+
+  width: 80px;
+  height: 140px;
+  background-image: url(../img/index/pin.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
 .map {
   background-color: inherit;
+  background-image: url("../img/index/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 430px;
   margin-top: 40px;
-  width: 1200px; /* У карты нет отступа как у всего контента на сайте, я подумала задать ширину, но как ее в цент поставить теперь, или как то по другому сделать?*/
+  position: relative;
 }
 
 /* Contact Information */
 
 .contact-information {
+  display: flex;
+  flex-direction: column;
   background-color: var(--basic-white);
   width: 303px;
   height: 306px;
@@ -602,6 +714,7 @@ img {
 }
 
 .contact-information button {
+  align-self: center;
   color: var(--basic-white);
   border: none;
   padding: 13px 28px;
@@ -611,21 +724,45 @@ img {
 /*  Footer */
 
 .main-footer {
-  padding: 60px;
-  margin-top: 65px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  max-height: 103px;
+  margin-bottom: 32px;
+  margin-top: 36px;
 }
 
 .social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 250px;
+}
+
+.social-networks a {
+  display: block;
+  padding-right: 12px;
 }
 
 .information {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 60px;
   list-style: none;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.information li {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  padding-top: 11px;
 }
 
 .information a {
@@ -674,6 +811,7 @@ img {
 /* Catalog page*/
 
 .pages-navigation {
+  display: flex;
   list-style: none;
   font-weight: 400;
   font-size: 14px;
@@ -683,12 +821,21 @@ img {
 }
 
 .pages-navigation a {
+  display: block;
+  padding-right: 22px;
+}
+
+.pages-navigation span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .pages-navigation a:hover,
 .pages-navigation a:focus {
   color: var(--basic-pink);
+}
+
+.pages-navigation span:hover,
+.pages-navigation span:focus {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
@@ -775,13 +922,14 @@ h1 {
 
 /* Pages */
 .catalog-pages {
-  display: flex;
-  justify-content: flex-end;
   margin-top: 80px;
   margin-bottom: 37px;
 }
 
 .catalog-pages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   list-style: none;
 }
 
@@ -790,4 +938,5 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  margin-right: 24px;
 }
