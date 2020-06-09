@@ -17,8 +17,8 @@
               <ul class="site-navigation">
                 <li><a href="" class="on-page"><span>Каталог</span></a>
                   <ul class="catalog-items">
-                    <li><a href="">Новинки</a></li>
-                    <li>Сливочное</li>
+                    <li><a href="" class="new">Новинки</a></li>
+                    <li class="on-page">Сливочное</li>
                     <li><a href="">Щербеты</a></li>
                     <li><a href="">Фруктовый лед</a></li>
                     <li><a href="">Мелорин</a></li>
@@ -30,21 +30,21 @@
               <ul class="user-navigation">
                 <li><button type="button" class="search-button"></button></li>
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label for="search-name">Поиск продукции</label>
+                  <label for="search-name" class="visually-hidden">Поиск продукции</label>
                   <input id="search-name" type="search" name="search" placeholder="Крем-брюле">
                 </form>
                 <li class="entrance">Вход
                   <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
                     <div>
-                      <label for="entrance-login">Введите email</label>
+                      <label for="entrance-login" class="visually-hidden">Введите email</label>
                       <input type="email" name="login" placeholder="email@example.com" required>
                     </div>
                     <div>
-                      <label for="entrance-password">Введите пароль</label>
+                      <label for="entrance-password" class="visually-hidden">Введите пароль</label>
                       <input type="password" name="password" placeholder="••••••" required>
                     </div>
-                      <button type="submit">Вход</button>
                     <div>
+                      <button type="submit" class="button">Вход</button>
                       <a href="">Забыли пароль?</a>
                       <a href="">Новая регистрация</a>
                     </div>
@@ -99,9 +99,15 @@
         </fieldset>
         <fieldset class="price">
           <legend>Цена: 100 ₽ – 500 ₽</legend>
-            <div></div>
-            <div></div>
-            <div></div>
+          <div class="price-filter">
+            <div class="price-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+          </div>
         </fieldset>
         <fieldset class="fat">
         <legend>Жирность:</legend>

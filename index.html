@@ -26,7 +26,7 @@
               <ul class="site-navigation">
                 <li><a href=""><span>Каталог</span></a>
                   <ul class="catalog-items">
-                    <li><a href="">Новинки</a></li>
+                    <li class="new"><a href="">Новинки</a></li>
                     <li><a href="catalog.html">Сливочное</a></li>
                     <li><a href="">Щербеты</a></li>
                     <li><a href="">Фруктовый лед</a></li>
@@ -39,22 +39,22 @@
               <ul class="user-navigation">
                 <li><button type="button" class="search-button"></button>
                   <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                    <label for="search-name">Поиск продукции</label>
+                    <label for="search-name" class="visually-hidden">Поиск продукции</label>
                     <input id="search-name" type="search" name="search" placeholder="Крем-брюле">
                   </form>
                 </li>
                 <li class="entrance">Вход
                   <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
                     <div>
-                      <label for="entrance-login">Введите email</label>
+                      <label for="entrance-login" class="visually-hidden">Введите email</label>
                       <input id="entrance-login" type="email" name="login" placeholder="email@example.com" required>
                     </div>
                     <div>
-                      <label for="entrance-password">Введите пароль</label>
+                      <label for="entrance-password" class="visually-hidden">Введите пароль</label>
                       <input id="entrance-password" type="password" name="password" placeholder="••••••" required>
                     </div>
-                    <button type="submit">Войти</button>
                     <div>
+                      <button type="submit" class="button">Войти</button>
                       <a href="">Забыли пароль?</a>
                       <a href="">Новая регистрация</a>
                     </div>
@@ -202,18 +202,18 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>Мы обязательно вам ответим!</p>
         <div>
-          <label for="feedback-name">Введите Ваше имя</label>
+          <label for="feedback-name" class="visually-hidden">Введите Ваше имя</label>
           <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
         </div>
         <div>
-          <label for="feedback-login">Введите email</label>
+          <label for="feedback-login" class="visually-hidden">Введите email</label>
           <input id="feedback-login" type="email" name="login" placeholder="email@example.com" required>
         </div>
         <div>
-          <label for="feedback-commentary">Оставьте комментарий</label>
+          <label for="feedback-commentary" class="visually-hidden">Оставьте комментарий</label>
           <textarea rows="10" cols="45" name="feedback" placeholder="В свободной форме" required></textarea>
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="button">Отправить</button>
       </form>
     </section>
     </main>

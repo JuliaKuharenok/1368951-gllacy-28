@@ -36,6 +36,7 @@
   --basic-dark-bordo: #D07058;
   --basic-pink: #FFBC9E;
   --basic-dark-pink: #E84D37;
+  --basic-cream: #F8F7F4;
 
   --background-green: #849D8F;
   --background-grey: #8996A6;
@@ -90,14 +91,6 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.search-form {
-  display: none;
-}
-
-.entrance-form {
-  display: none;
 }
 
 .feedback-form {
@@ -181,7 +174,7 @@ img {
   background: var(--basic-white);
   border-radius: 26px;
   padding: 9px 13px;
-  margin-top: 23px;
+  margin-top: 25px;
 }
 
 .site-navigation a:focus {
@@ -202,7 +195,57 @@ img {
 
 .catalog-items {
   list-style: none;
-  display: none;
+  font-weight: 400;
+  padding: 0;
+  position: absolute;
+  width: 143px;
+  height: 171px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.catalog-items .new {
+  font-weight: 600;
+  padding-bottom: 17px;
+  padding-top: 13px;
+}
+
+.catalog-items a {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-left: 21px;
+  color: var(--basic-black);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.catalog-items a:hover {
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 21px;
+  display: block;
+  background-color: var(--basic-light-bordo);
+  border-radius: 0;
+}
+
+.catalog-items a:focus {
+  display: block;
+  background-color: var(--basic-bordo);
+  border-radius: 0;
+}
+
+.catalog-items .on-page {
+  display: block;
+  background-color: var(--basic-dark-bordo);
+  border-radius: 0;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 10px;
+  padding-left: 21px;
+  padding-bottom: 10px;
 }
 
 .user-navigation {
@@ -231,6 +274,7 @@ img {
   border-radius: 50%;
   margin-top: 23px;
   margin-right: 10px;
+  position: relative;
 }
 
 .search-button:hover {
@@ -242,6 +286,25 @@ img {
   height: 32px;
   padding: 7px;
   border-radius: 50%;
+}
+
+.search-form {
+  position: absolute;
+  right: 360px;
+  width: 341px;
+  height: 84px;
+  background-color: var(--basic-cream);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.search-form input {
+  width: 311px;
+  height: 44px;
+  margin-top: 20px;
+  margin-left: 15px;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
 }
 
 .entrance::before {
@@ -276,6 +339,48 @@ img {
 .entrance:hover {
   background: var(--basic-white);
   color: var(--basic-black);
+}
+
+.entrance-form {
+  position: absolute;
+  right: 2px;
+  margin-top: 8px;
+  width: 277px;
+  height: 214px;
+  background-color: var(--basic-cream);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.entrance-form a {
+  font-weight: 400;
+  color: var(--basic-black);
+  font-size: 13px;
+  line-height: 15px;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+  padding-left: 20px;
+}
+
+.entrance-form input {
+  width: 241px;
+  height: 44px;
+  margin-top: 20px;
+  margin-left: 17px;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+}
+
+.entrance-form .button {
+  font-size: 18px;
+  line-height: 16px;
+  color: var(--basic-white);
+  border: none;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  padding-right: 25px;
+  margin-top: 20px;
+  margin-left: 19px;
 }
 
 .cart-empty::before {
@@ -642,6 +747,9 @@ img {
 .mailing input {
   margin-right: 10px;
   width: 368px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 6px;
 }
 
 .mailing button {
@@ -651,6 +759,51 @@ img {
   line-height: 24px;
   padding: 13px 19px;
 }
+
+/* .feedback-form {
+  display: flex;
+  flex-direction: column;
+  width: 477px;
+  height: 441px;
+  background-color: var(--basic-cream);
+  border-radius: 6px;
+  position: relative;
+  bottom: 1640px;
+  left: 481px;
+}
+
+.feedback-form p {     /* Почему не применяются стили? */
+/*  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 20px;
+  padding-left: 23px;
+}
+
+.feedback-form input {
+  width: 267px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-left: 24px;
+}
+
+.feedback-form textarea {
+  width: 428px;
+  height: 154px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 4px;
+  margin-left: 24px;
+  margin-bottom: 25px;
+}
+
+.feedback-form .button {
+  align-self: flex-end;
+  margin-top: 0;
+  margin-bottom: 27px;
+  margin-right: 25px;
+} */
 
 /* Map */
 .map::before {
@@ -851,6 +1004,9 @@ h1 {
 /* Sorting */
 
 .sorting {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 869px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -863,14 +1019,57 @@ h1 {
   border: none;
   font-size: 16px;
   line-height: 18px;
+  width: 196px;
 }
 
 .price {
-  background: var(--basic-extra-white);
-  border-radius: 20px;
   border: none;
   font-size: 16px;
   line-height: 18px;
+  width: 218px;
+}
+
+.price-controls {
+  position: relative;
+  height: 18px;
+  background-color: var(--basic-extra-white);
+  border-radius: 20px;
+  padding-top: 18px;
+  padding-left: 21px;
+}
+
+.price-controls .scale {
+  height: 2px;
+  background-color: rgba(248, 247, 244, 0.5);
+  width: 176px;
+}
+
+.price-controls .bar {
+  width: 50%;
+  height: 2px;
+  background: #F8F7F4;
+  padding-left: 30px;
+}
+
+.price-controls .toggle {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: #ababab;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price-controls .toggle-min {
+  left: 30px;
+}
+
+.price-controls .toggle-max {
+  left: 140px;
 }
 
 .fat {
@@ -879,6 +1078,7 @@ h1 {
   border: none;
   font-size: 16px;
   line-height: 18px;
+  width: 452px;
 }
 
 .fat li {
