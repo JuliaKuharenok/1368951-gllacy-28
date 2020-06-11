@@ -122,12 +122,12 @@ img {
 
 .main-navigation {
   display: flex;
+  margin-top: 9px;
 }
 
 .main-navigation-wrapper {
   width: 100%;
-  margin-bottom: 60px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .main-navigation-wrapper .wrapper{
@@ -144,15 +144,16 @@ img {
 /* Navigation */
 
 .main-header-logo {
-  padding-top: 9px;
+  width: 154px;
+  height: 64px;
 }
 
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 420px;
   margin: 0;
   padding: 0;
+  margin-top: 5px;
   list-style: none;
   font-weight: 600;
   font-size: 16px;
@@ -161,8 +162,10 @@ img {
 
 .site-navigation a {
   display: block;
-  padding-top: 25px;
-  padding-left: 32px;
+  padding-right: 19px;
+  padding-left: 13px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .site-navigation span {
@@ -173,8 +176,7 @@ img {
   color: var(--basic-black);
   background: var(--basic-white);
   border-radius: 26px;
-  padding: 9px 13px;
-  margin-top: 25px;
+  padding-top: 9px 13px;
 }
 
 .site-navigation a:focus {
@@ -182,7 +184,6 @@ img {
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
   padding: 9px 13px;
-  margin-top: 23px;
 }
 
 .on-page {
@@ -194,6 +195,7 @@ img {
 }
 
 .catalog-items {
+  display: none;
   list-style: none;
   font-weight: 400;
   padding: 0;
@@ -254,11 +256,16 @@ img {
   max-width: 270px;
   margin: 0;
   padding: 0;
+  margin-top: 7px;
   list-style: none;
   font-family: roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+}
+
+.user-navigation li {
+  margin-left: 10px;
 }
 
 .search-button {
@@ -272,8 +279,6 @@ img {
   height: 32px;
   padding: 7px;
   border-radius: 50%;
-  margin-top: 23px;
-  margin-right: 10px;
   position: relative;
 }
 
@@ -289,6 +294,7 @@ img {
 }
 
 .search-form {
+  display: none;
   position: absolute;
   right: 360px;
   width: 341px;
@@ -331,8 +337,6 @@ img {
   padding-top: 8px;
   padding-left: 44px;
   padding-right: 16px;
-  margin-top: 23px;
-  margin-right: 10px;
   position: relative;
 }
 
@@ -342,6 +346,7 @@ img {
 }
 
 .entrance-form {
+  display: none;
   position: absolute;
   right: 2px;
   margin-top: 8px;
@@ -379,8 +384,6 @@ img {
   padding-left: 25px;
   padding-bottom: 15px;
   padding-right: 25px;
-  margin-top: 20px;
-  margin-left: 19px;
 }
 
 .cart-empty::before {
@@ -402,17 +405,8 @@ img {
   padding-top: 8px;
   padding-left: 45px;
   padding-right: 16px;
-  margin-top: 23px;
   position: relative;
 }
-
-/* .cart-empty a:hover {
-  color: var(--basic-black);
-}
-
-.cart-empty:hover {
-  background: var(--basic-white);
-} */
 
 .cart-full::after {
   content:"";
@@ -447,8 +441,7 @@ img {
   font-size: 14px;
   line-height: 16px;
   margin: 0;
-  margin-top: -50px; /* это не правильно, но по другому поднять выше не вышло*/
-  padding-top: 20px;
+  margin-bottom: 275px;
 }
 
 .phone-number {
@@ -478,15 +471,17 @@ img {
 }
 
 .advertisment {
-  margin-top: 275px;
   margin-bottom: 40px;
 }
 
 .advertisment h3 {
+  max-width: 672px;
   font-weight: 600;
   font-size: 60px;
   line-height: 60px;
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 27px;
 }
 
