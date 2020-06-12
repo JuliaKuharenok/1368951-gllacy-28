@@ -65,11 +65,9 @@
             </div>
           </div>
         </nav>
-        <div>
-          <p class="open-hours">
-            с 10 до 20, ежедневно
-            <a class="phone-number" href="tel:88124502525">8 812 450-25-25</a>
-          </p>
+        <div class="open-hours">
+          <p>с 10 до 20, ежедневно</p>
+          <a class="phone-number" href="tel:88124502525">8 812 450-25-25</a>
         </div>
       </header>
       <main class="container">
@@ -159,10 +157,10 @@
           <h2 class="visually-hidden">О магазине Глейси</h2> <!-- скрытый заголовок-->
           <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</p>
           <ul>
-            <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-            <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-            <li>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-            <li>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+            <li class="eskimo-pin">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+            <li class="cow-pin">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+            <li class="leaf-pin">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+            <li class="termometr-pin">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
           </ul>
         </section>
         <div class="blog-mailing">
@@ -183,40 +181,42 @@
     </div>
     <section class="map">
       <h2 class="visually-hidden">Как до нас добраться?</h2>
+      <div class="container">
+        <div class="contact-information">
+          <h2 class="visually-hidden">Контактная инфа</h2>
+          <p>
+            Адрес главного офиса
+            и офлайн-магазина:
+            <span>ул. Большая Конюшенная,
+            19/8, Санкт-Петербург</span>
+          </p>
+          <p>
+            Для заказов по телефону:
+            <a href="tel:88124502525">8 812 450-25-25</a>
+            (с 10 до 20 ежедневно)
+          </p>
+          <button type="submit" class="button">Форма обратной связи</button>
+          <button type="button" class="visually-hidden">Закрыть</button>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>Мы обязательно вам ответим!</p>
+            <div>
+              <label for="feedback-name" class="visually-hidden">Введите Ваше имя</label>
+              <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+            </div>
+            <div>
+              <label for="feedback-login" class="visually-hidden">Введите email</label>
+              <input id="feedback-login" type="email" name="login" placeholder="email@example.com" required>
+            </div>
+            <div>
+              <label for="feedback-commentary" class="visually-hidden">Оставьте комментарий</label>
+              <textarea rows="10" cols="45" name="feedback" placeholder="В свободной форме" required></textarea>
+            </div>
+            <button type="submit" class="button">Отправить</button>
+          </form>
+        </div>
+      </div>
     </section>
-    <section class="contact-information">
-      <h2 class="visually-hidden">Контактная инфа</h2>
-      <p>
-        Адрес главного офиса
-        и офлайн-магазина:
-        <span>ул. Большая Конюшенная,
-          19/8, Санкт-Петербург</span>
-      </p>
-      <p>
-        Для заказов по телефону:
-        <a href="tel:88124502525">8 812 450-25-25</a>
-        (с 10 до 20 ежедневно)
-      </p>
-      <button type="submit" class="button">Форма обратной связи</button>
-      <button type="button" class="visually-hidden">Закрыть</button>
-      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>Мы обязательно вам ответим!</p>
-        <div>
-          <label for="feedback-name" class="visually-hidden">Введите Ваше имя</label>
-          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
-        </div>
-        <div>
-          <label for="feedback-login" class="visually-hidden">Введите email</label>
-          <input id="feedback-login" type="email" name="login" placeholder="email@example.com" required>
-        </div>
-        <div>
-          <label for="feedback-commentary" class="visually-hidden">Оставьте комментарий</label>
-          <textarea rows="10" cols="45" name="feedback" placeholder="В свободной форме" required></textarea>
-        </div>
-        <button type="submit" class="button">Отправить</button>
-      </form>
-    </section>
-    </main>
+  </main>
     <div class="container">
       <footer class="main-footer container">
         <ul aria-label="Соцсети" class="social-networks">

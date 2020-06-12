@@ -72,11 +72,9 @@
             </div>
           </div>
         </nav>
-        <div>
-          <p class="open-hours">
-            с 10 до 20, ежедневно
+        <div class="open-hours">
+          <p>с 10 до 20, ежедневно</p>
             <a class="phone-number" href="tel:88124502525">8 812 450-25-25</a>
-          </p>
         </div>
     </header>
     <main class="container">
@@ -86,11 +84,11 @@
         <li>Сливочное</li>
       </ul>
       <h1>Сливочное мороженое</h1>
-      <div class="sorting">
-        <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="sorting-principle">
+      <section>
+        <form action="https://echo.htmlacademy.ru" method="get" class="sorting">
+        <fieldset>
         <legend>Сортировка:</legend>
-          <select name="sorting-principle" size="1">
+          <select name="sorting-principle" size="1" class="sorting-principle">
             <option name="popular">по популярности</option>
             <option name="cheap">сначала недорогие</option>
             <option name="expensive">сначала дорогие</option>
@@ -109,9 +107,9 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="fat">
+        <fieldset>
         <legend>Жирность:</legend>
-          <ul>
+          <ul class="fat">
             <li>
               <label>
                 <input type="radio" name="fat-content" value="0%">
@@ -134,9 +132,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filling">
+        <fieldset>
         <legend>Наполнители:</legend>
-          <ul>
+          <ul class="filling">
             <li>
               <label>
                 <input type="checkbox" name="chokolate" checked>
@@ -166,7 +164,7 @@
         </fieldset>
         <button type="submit" class="apply-button">Применить</button>
       </form>
-      </div>
+    </section>
       <section class="icecream">
         <h2 class="visually-hidden">Ассортимент</h2>           <!-- скрытый заголовок-->
         <ul class="icecream-list">
@@ -295,7 +293,7 @@
       <div class="catalog-pages">
         <ul class="catalog-pages-list">
           <li><a href="#prev"><img src="img/catalog/back.svg" width="7" height="12" alt="Кнопка назад"><span class="visually-hidden">Назад</span></a></li>
-          <li><a href="catalog.html">1</a></li>
+          <li><a href="catalog.html" class="on-page">1</a></li>
           <li><a href="catolog2.html">2</a></li>
           <li><a href="catalog3.html">3</a></li>
           <li><a href="catalog4.html">4</a></li>
