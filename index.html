@@ -26,7 +26,7 @@
               <ul class="site-navigation">
                 <li><a href=""><span>Каталог</span></a>
                   <ul class="catalog-items">
-                    <li class="new"><a href="">Новинки</a></li>
+                    <li><a href="" class="new">Новинки</a></li>
                     <li><a href="catalog.html">Сливочное</a></li>
                     <li><a href="">Щербеты</a></li>
                     <li><a href="">Фруктовый лед</a></li>
@@ -45,18 +45,16 @@
                 </li>
                 <li class="entrance">Вход
                   <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
-                    <div>
-                      <label for="entrance-login" class="visually-hidden">Введите email</label>
-                      <input id="entrance-login" type="email" name="login" placeholder="email@example.com" required>
-                    </div>
-                    <div>
-                      <label for="entrance-password" class="visually-hidden">Введите пароль</label>
-                      <input id="entrance-password" type="password" name="password" placeholder="••••••" required>
-                    </div>
+                    <label for="entrance-login" class="visually-hidden">Введите email</label>
+                    <input id="entrance-login" type="email" name="login" placeholder="email@example.com" required>
+                    <label for="entrance-password" class="visually-hidden">Введите пароль</label>
+                    <input id="entrance-password" type="password" name="password" placeholder="••••••" required>
                     <div>
                       <button type="submit" class="button">Войти</button>
-                      <a href="">Забыли пароль?</a>
-                      <a href="">Новая регистрация</a>
+                      <div class="links">
+                        <a href=""><span>Забыли пароль?</span></a>
+                        <a href=""><span>Новая регистрация</span></a>
+                      </div>
                     </div>
                   </form>
                 </li>
@@ -198,7 +196,7 @@
           <button type="submit" class="button">Форма обратной связи</button>
           <button type="button" class="visually-hidden">Закрыть</button>
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>Мы обязательно вам ответим!</p>
+            <p class="form-header">Мы обязательно вам ответим!</p>
             <div>
               <label for="feedback-name" class="visually-hidden">Введите Ваше имя</label>
               <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
