@@ -9,12 +9,12 @@
 </head>
 
 <body class="page-body">
-  <div class="visually-hidden">
+  <!-- <div class="visually-hidden">
     <input id="green-theme" type="radio" name="theme" value="green">
     <input id="gray-theme" type="radio" name="theme" value="grey">
     <input id="brown-theme" type="radio" name="theme" value="brown">
-  </div>
-  <div class="site-wrapper">
+  </div> -->
+  <div class="site-wrapper site-wrapper-2">
     <div class="container">
       <header class="main-header container">
         <nav class="main-navigation">
@@ -72,25 +72,32 @@
         <h1 class="visually-hidden">Магазин мороженого "Глейси"</h1>
         <section class="advertisment">
           <h2 class="visually-hidden">Выгодное предложение</h2>
-          <div>
+        <!--  <div>
             <label for="green-theme"></label>
             <label for="gray-theme"></label>
             <label for="brown-theme"></label>
-          </div>
-          <ul class="site-wrapper-list">
-            <li>
+          </div> -->
+          <section class="slider">
+          <ul class="slider-list">
+            <li class="slider-item">
               <h3>Крем-брюле и пломбир с малиновым джемом</h3>
               <a href="blank.html" class="button">Давайте оба!</a>
             </li>
-            <li class="visually-hidden">
+            <li class="slider-item slide-current">
               <h3>Шоколадный пломбир и лимонный сорбет</h3>
               <a href="blank.html" class="button">Давайте оба!</a>
             </li>
-            <li class="visually-hidden">
+            <li class="slider-item">
               <h3>Пломбир с помадкой и клубничный щербет</h3>
               <a href="blank.html" class="button">Давайте оба!</a>
             </li>
           </ul>
+          <div class="slider-controls">
+            <button type="button" aria-label="Первый слайд" class="current"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+            <button type="button" aria-label="Третий слайд"></button>
+        </div>
+        </section>
         </section>
         <section class="offers">
           <ul class="offers-list">
@@ -180,22 +187,22 @@
     <section class="map">
       <h2 class="visually-hidden">Как до нас добраться?</h2>
       <div class="container">
-        <div class="contact-information">
+        <section class="contact-information">
           <h2 class="visually-hidden">Контактная инфа</h2>
           <p>
-            Адрес главного офиса
-            и офлайн-магазина:
-            <span>ул. Большая Конюшенная,
+            Адрес главного офиса<br>
+            и офлайн-магазина:<br>
+            <span>ул. Большая Конюшенная,<br>
             19/8, Санкт-Петербург</span>
           </p>
           <p>
-            Для заказов по телефону:
-            <a href="tel:88124502525">8 812 450-25-25</a>
+            Для заказов по телефону:<br>
+            <a href="tel:88124502525">8 812 450-25-25</a><br>
             (с 10 до 20 ежедневно)
           </p>
           <button type="submit" class="button">Форма обратной связи</button>
-          <button type="button" class="visually-hidden">Закрыть</button>
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <button type="button" class="close-button" aria-label="Закрыть"></button>
             <p class="form-header">Мы обязательно вам ответим!</p>
             <div>
               <label for="feedback-name" class="visually-hidden">Введите Ваше имя</label>
@@ -212,7 +219,7 @@
             <button type="submit" class="button">Отправить</button>
           </form>
         </div>
-      </div>
+      </section>
     </section>
   </main>
     <div class="container">

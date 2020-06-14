@@ -503,7 +503,6 @@ img {
 /* Special offers*/
 
 .site-wrapper {
-  background-image: url(../img/index/twoicecream1.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -514,8 +513,62 @@ img {
   padding: 0;
 }
 
-.index-pages {
+.site-wrapper-1 {
+  background-color: var(--background-green);
+  background-image: url(../img/index/twoicecream1.png);
+}
+
+.site-wrapper-2 {
+  background-color: var(--background-grey);
+  background-image: url(../img/index/twoicecream2.png);
+}
+
+.site-wrapper-3 {
+  background-color: var(--background-brown);
+  background-image: url(../img/index/twoicecream3.png);
+}
+
+.slider {
+  position: relative;
+  text-align: center;
+  color: var(--basic-white);
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.slider-item {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  display: flex;
+  width: 67px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls .current {
+  background-color: var(--basic-white);
 }
 
 .advertisment {
@@ -539,10 +592,6 @@ img {
   font-size: 32px;
   line-height: 44px;
   padding: 10px 40px;
-}
-
-.site-wrapper-list li {
-  text-align: center;
 }
 
 .offers {
@@ -694,7 +743,7 @@ img {
 
 .about-company {
   background-image: url("../img/index/vaffel.png");
-  background-color: EEE2C9;
+  background-color: #EEE2C9;
   background-repeat: repeat, no-repeat;
   width: 1146px;
   height: 306px;
@@ -865,14 +914,15 @@ img {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
-  padding-bottom: 47px;
-  max-width: 512px;
+  margin-bottom: 47px;
 }
 
 .mailing input {
   margin-right: 10px;
-  width: 368px;
-  height: 44px;
+  padding-left: 14px;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  padding-right: 187px;
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 6px;
 }
@@ -885,53 +935,13 @@ img {
   padding: 13px 19px;
 }
 
-.feedback-form {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--basic-cream);
-  border-radius: 6px;
-  position: absolute;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 25px;
-}
-
-.form-header {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  padding-top: 20px;
-  padding-left: 23px;
-} 
-
-.feedback-form input {
-  border: 1px solid rgba(178, 178, 178, 0.52);
-  border-radius: 4px;
-  margin-bottom: 20px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 14px;
-  padding-right: 147px;
-}
-
-.feedback-form textarea {
-  border: 1px solid rgba(178, 178, 178, 0.52);
-  border-radius: 4px;
-  padding-top: 16px;
-  padding-left: 14px;
-}
-
-.feedback-form .button {
-  align-self: flex-end;
-  margin-top: 25px;
-}
-
 /* Map */
 .map::before {
   content: "";
   position: absolute;
-  top: 145px;
-  left: 330px;
+  top: 50%;           /* Я еще в прошлый раз пыталась, но чот не вышло:(*/
+  margin-top: 70px;
+  left: 270px;
 
   width: 80px;
   height: 140px;
@@ -954,16 +964,18 @@ img {
 
 /* Contact Information */
 
+.container {
+  position: relative;
+}
+
 .contact-information {
   position: absolute;
-  top: 62px;
-  left: 1040px;
   background-color: var(--basic-white);
-  max-width: 278px;
-  height: 274px;
   border-radius: 16px;
   padding-left: 25px;
   padding-top: 32px;
+  padding-right: 25px;
+  padding-bottom: 31px;
 }
 
 .contact-information p {
@@ -995,6 +1007,80 @@ img {
   padding: 13px 28px;
 }
 
+.feedback-form {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  background-color: var(--basic-cream);
+  border-radius: 6px;
+  position: fixed;
+  left: 362px;
+  top: 228px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 25px;
+  padding-top: 20px;
+}
+
+.contact-information .form-header {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.feedback-form input {
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 14px;
+  padding-right: 147px;
+}
+
+.feedback-form textarea {
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-left: 14px;
+  padding-bottom: 16px;
+  padding-right: 14px;
+}
+
+.feedback-form .button {
+  align-self: flex-end;
+  margin-top: 25px;
+}
+
+.feedback-form .close-button {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  height: 18px;
+  width: 18px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.feedback-form .close-button::after,
+.feedback-form .close-button::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background-color: #231F20;
+}
+
+.feedback-form .close-button::before {
+  transform: rotate(45deg);
+}
+
+.feedback-form .close-button::after {
+  transform: rotate(-45deg);
+}
+
 /*  Footer */
 
 .main-footer {
@@ -1017,7 +1103,7 @@ img {
 
 .social-networks a {
   display: block;
-  padding-right: 12px;
+  margin-right: 12px;
 }
 
 .information {
@@ -1054,10 +1140,7 @@ img {
 }
 
 .developed {
-  display:flex;
-  flex-direction: column;
-	justify-content: flex-start;
-  align-items: flex-end;
+  margin-left: auto;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -1075,7 +1158,6 @@ img {
 
 .developed .logo {
   align-self: center;
-  margin-left: 110px;
   border-bottom: none;
 }
 
@@ -1130,7 +1212,6 @@ h1 {
 .sorting {
   display: flex;
   flex-wrap: wrap;
-  max-width: 869px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
