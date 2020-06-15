@@ -451,15 +451,140 @@ img {
   background-color: var(--basic-cream);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  padding-top: 20px;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  padding-top: 0;
   padding-right: 14px;
   padding-bottom: 21px;
-  padding-left: 21px;
+  padding-right: 14px;
+  padding-left: 57px;
   width: 539px;
   height: 242px;
 }
 
+table {
+  border-spacing: 30px;
+}
+
+.cart-content span {
+  color: #C4C4C4;
+}
+
+.cart-content p {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 16px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
 .cart-content div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.confirm-button {
+  padding: 13px 15px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.goods1 {
+  position: relative;
+}
+
+.goods1::before {
+  content:"";
+  position: absolute;
+  left: -45px;
+  top: 2px;
+  width: 33px;
+  height: 33px;
+  background-color: pink;
+  background-image: url("..img/catalog/icecream1.jpg");
+  border-radius: 50%;
+}
+
+.goods2 {
+  position: relative;
+}
+
+.goods2::before {
+  content:"";
+  position: absolute;
+  left: -45px;
+  top: 2px;
+  width: 33px;
+  height: 33px;
+  background-color: pink;
+  background-image: url("..img/catalog/icecream1.jpg");
+  border-radius: 50%;
+}
+
+.cart-content .close-button1 {
+  position: absolute;
+  left: 12px;
+  top: 45px;
+  height: 11px;
+  width: 11px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.cart-content .close-button2 {
+  position: absolute;
+  left: 12px;
+  top: 105px;
+  height: 11px;
+  width: 11px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.cart-content .close-button1::after,
+.cart-content .close-button1::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 11px;
+  height: 1px;
+  background-color: #231F20;
+}
+
+.cart-content .close-button1::before {
+  transform: rotate(45deg);
+}
+
+.cart-content .close-button1::after {
+  transform: rotate(-45deg);
+}
+
+.cart-content .close-button2::after,
+.cart-content .close-button2::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 11px;
+  height: 1px;
+  background-color: #231F20;
+}
+
+.cart-content .close-button2::before {
+  transform: rotate(45deg);
+}
+
+.cart-content .close-button2::after {
+  transform: rotate(-45deg);
+}
+
+/* .cart-content div {
   display: flex;
   margin-bottom: 20px;
 }
@@ -478,7 +603,7 @@ img {
   margin-right: 13px;
   border-radius: 50%;
   margin-bottom: 11px;
-}
+} */
 
 .open-hours {
   text-align: right;
@@ -1242,7 +1367,10 @@ h1 {
   padding-bottom: 10px;
 }
 
-.sorting-principle option {
+.sorting-principle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: var(--basic-white);
 }
 
@@ -1304,7 +1432,7 @@ h1 {
   font-size: 16px;
   line-height: 18px;
   margin: 0;
-  padding-left: 14px;
+  padding-left: 47px;
   padding-top: 13px;
   padding-right: 17px;
   padding-bottom: 12px;
@@ -1312,7 +1440,40 @@ h1 {
 
 .fat li {
   list-style: none;
-  margin-right: 19px;
+  margin-right: 52px;
+}
+
+.fat li:last-child {
+  margin-right: 0;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -5px;
+  width: 17px;
+  height: 17px;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.radio-checked::after {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 7px;
+  height: 7px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
 }
 
 .filling {
@@ -1323,7 +1484,7 @@ h1 {
   font-size: 16px;
   line-height: 18px;
   margin: 0;
-  padding-left: 16px;
+  padding-left: 48px;
   padding-top: 13px;
   padding-right: 19px;
   padding-bottom: 10px;
@@ -1331,7 +1492,35 @@ h1 {
 
 .filling li {
   list-style: none;
-  margin-right: 24px;
+  margin-right: 52px;
+}
+
+.filling li:last-child {
+  margin-right: 0;
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(..img/catalog/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.checkbox-checked::after {
+  content: "";
+  position: absolute;
+  left: -25px;
+  width: 24px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(..img/catalog/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .apply-button {
