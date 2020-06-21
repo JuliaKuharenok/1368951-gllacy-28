@@ -189,6 +189,7 @@ img {
   background: var(--basic-dark-bordo);
   border-radius: 26px;
   padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 13px;
   pointer-events: none;
 }
@@ -201,8 +202,8 @@ img {
   display: none;
   list-style: none;
   font-weight: 400;
+  max-width: 417px;
   padding: 0;
-  position: absolute;
   background-color: var(--basic-white);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -210,17 +211,17 @@ img {
 
 .catalog-items .new {
   font-weight: 600;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  padding-right: 64px;
   border-bottom: 1px solid rgba(50, 50, 50, 0.2);
 }
 
 .catalog-items a {
   margin: 0;
   padding: 0;
-  padding-top: 12px;
-  padding-left: 21px;
-  padding-right: 20px;
-  padding-bottom: 14px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 6px;
   color: var(--basic-black);
   font-size: 14px;
   line-height: 16px;
@@ -253,6 +254,17 @@ img {
   padding-bottom: 14px;
 }
 
+.catalog {
+  position: relative;
+}
+
+.catalog:hover .catalog-items {
+  display: block;
+  position: absolute;
+  left: -4px;
+  top: 40px;
+}
+
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -269,6 +281,7 @@ img {
 
 .user-navigation li {
   margin-left: 10px;
+  position: relative;
 }
 
 .search-button {
@@ -282,26 +295,11 @@ img {
   height: 32px;
   padding: 7px;
   border-radius: 50%;
-  position: relative;
   cursor: pointer;
 }
 
-.search-button:hover,
-.search-button:focus {
-  background: var(--basic-white);
-  background-image: url(../img/header/search2.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 32px;
-  height: 32px;
-  padding: 7px;
-  border-radius: 50%;
-}
-
 .search-form {
-  position: absolute;
   display: none;
-  right: 210px;
   background-color: var(--basic-cream);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -312,9 +310,27 @@ img {
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 150px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
+}
+
+.search:hover .search-form {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 35px;
+}
+
+.search:hover .search-button {
+  background: var(--basic-white);
+  background-image: url(../img/header/search2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 50%;
 }
 
 .entrance::before {
@@ -345,24 +361,15 @@ img {
   cursor: pointer;
 }
 
-.entrance:hover,
-.entrance:focus {
-  background: var(--basic-white);
-  color: var(--basic-black);
-}
-
 .entrance-form {
   display: none;
-  position: absolute;
-  top: 32px;
-  right: 5px;
   background-color: var(--basic-cream);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   padding-top: 20px;
   padding-left: 19px;
   padding-right: 17px;
-  padding-bottom: 22px;
+  padding-bottom: 13px;
 }
 
 .entrance-form a {
@@ -378,10 +385,10 @@ img {
 }
 
 .entrance-form input {
-  padding-left: 15px;
+  padding-left: 13px;
   padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 95px;
+  padding-bottom: 12px;
+  padding-right: 80px;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -401,11 +408,28 @@ img {
   line-height: 16px;
   color: var(--basic-white);
   border: none;
-  padding-top: 15px;
+  padding-top: 13px;
   padding-left: 25px;
   padding-bottom: 15px;
   padding-right: 25px;
   margin-right: 20px;
+  margin-bottom: 7px;
+}
+
+.entrance:hover {
+  background: var(--basic-white);
+}
+
+.entrance:hover a {
+  color: var(--basic-black);
+}
+
+.entrance:hover .entrance-form {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 35px;
 }
 
 .cart-empty::before {
@@ -447,7 +471,7 @@ img {
   background: var(--basic-white);
   color: var(--basic-black);
   border-radius: 20px;
-  padding-top: 10px;
+  padding-top: 9px;
   padding-left: 44px;
   padding-right: 16px;
   position: relative;
@@ -455,7 +479,9 @@ img {
 
 .cart-content {
   position: absolute;
-  right: 5px;
+  right: 0;
+  top: 35px;
+  z-index: 1;
   background-color: var(--basic-cream);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -471,7 +497,13 @@ img {
 
 table {
   border-spacing: 30px;
+  width: 100%;
 }
+
+.full-price td {
+  width: 400px;
+}
+
 
 .cart-content span {
   color: #C4C4C4;
@@ -830,7 +862,7 @@ table {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 26px;
-  row-gap: 40px;
+  row-gap: 34px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -852,7 +884,7 @@ table {
   line-height: 45px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
   margin-top: -59px;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 }
 
 .icecream-list span {
@@ -879,20 +911,28 @@ table {
 }
 
 .quick-view {
+  display: none;
+}
+
+.icecream article:hover {
   position: absolute;
-  top: -10px;
-  width: 293px;
-  height: 402px;
+  z-index: 1;
+  padding-top: 6px;
+  padding-right: 13px;
+  padding-left: 13px;
+  margin-bottom: 14px;
+  max-width: 293px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
-.quick-view .button{
-  position: absolute;
-  top: 350px;
-  left: 50px;
+.icecream article:hover .quick-view {
+  display: block;
+  color: var(--basic-white);
+  margin-bottom: 21px;
 }
+
 
 /* Our Company */
 
@@ -1182,8 +1222,6 @@ table {
   background-color: var(--basic-cream);
   border-radius: 6px;
   position: fixed;
-  left: 362px;
-  top: 228px;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 25px;
@@ -1249,6 +1287,55 @@ table {
   transform: rotate(-45deg);
 }
 
+.popup-show {
+  display: block;
+  animation: bounce 0,6s;
+}
+
+.popup-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 /*  Footer */
 
 .main-footer {
@@ -1305,8 +1392,19 @@ table {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
+.information span::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -20px;
+  background-image: url(../img/footer/heart.svg);
+  width: 15px;
+  height: 13px;
+}
+
 .information span {
   font-weight: 600;
+  position: relative;
 }
 
 .developed {
@@ -1351,8 +1449,8 @@ table {
   line-height: 16px;
   margin: 0px;
   padding: 0px;
-  margin-top: -12px;
-  margin-bottom: 13px;
+  margin-top: -24px;
+  margin-bottom: 1px;
 }
 
 .pages-navigation a {
@@ -1374,12 +1472,13 @@ table {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
+
 h1 {
   font-weight: 600;
   font-size: 35px;
   line-height: 41px;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 }
 
 /* Sorting */
@@ -1401,8 +1500,8 @@ h1 {
 }
 
 .sorting legend {
-  margin-bottom: 7px;
-  margin-left: 20px;
+  margin-bottom: 8px;
+  margin-left: 17px;
 }
 
 .sorting-principle {
@@ -1411,10 +1510,11 @@ h1 {
   border: none;
   font-size: 16px;
   line-height: 18px;
-  padding-left: 16px;
-  padding-right: 14px;
-  padding-top: 13px;
-  padding-bottom: 10px;
+  padding-left: 13px;
+  padding-right: 16px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  margin-bottom: 13px;
 }
 
 .sorting-principle {
@@ -1426,8 +1526,8 @@ h1 {
 
 .price {
   border: none;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .price-controls {
@@ -1435,7 +1535,7 @@ h1 {
   height: 18px;
   background-color: var(--basic-extra-white);
   border-radius: 20px;
-  padding-top: 18px;
+  padding-top: 15px;
   padding-left: 21px;
   padding-right: 21px;
 }
@@ -1455,7 +1555,7 @@ h1 {
 
 .price-controls .toggle {
   position: absolute;
-  top: 10px;
+  top: 7px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -1467,11 +1567,11 @@ h1 {
 }
 
 .price-controls .toggle-min {
-  left: 30px;
+  left: 34px;
 }
 
 .price-controls .toggle-max {
-  left: 140px;
+  left: 132px;
 }
 
 .fat {
@@ -1482,10 +1582,10 @@ h1 {
   font-size: 16px;
   line-height: 18px;
   margin: 0;
-  padding-left: 47px;
-  padding-top: 13px;
+  padding-left: 48px;
+  padding-top: 8px;
   padding-right: 17px;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .fat li {
@@ -1535,14 +1635,14 @@ h1 {
   line-height: 18px;
   margin: 0;
   padding-left: 48px;
-  padding-top: 13px;
-  padding-right: 19px;
+  padding-top: 10px;
+  padding-right: 18px;
   padding-bottom: 10px;
 }
 
 .filling li {
   list-style: none;
-  margin-right: 52px;
+  margin-right: 55px;
 }
 
 .filling li:last-child {
@@ -1582,27 +1682,29 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  margin-top: 22px;
+  margin-top: 26px;
   padding-left: 29px;
-  padding-top: 12px;
+  padding-top: 8px;
   padding-right: 29px;
-  padding-bottom: 9px;
+  padding-bottom: 8px;
 }
 
-.apply-button:hover {
-  background: var(--basic-white);
-  color: var(--basic-black);
-}
-
+.apply-button:hover,
 .apply-button:focus {
   background: var(--basic-white);
   color: var(--basic-black);
-  box-shadow: inset 0px 2px 1px #696969; /* тень не совпадает по закруглению кнопки */
+}
+
+.apply-button:active {
+  background: var(--basic-white);
+  color: var(--basic-black);
+  box-shadow: inset 0px 2px 1px #696969;
+  border: none;
 }
 
 /* Pages */
 .catalog-pages {
-  margin-top: 90px;
+  margin-top: 82px;
   margin-bottom: 37px;
 }
 
@@ -1620,13 +1722,21 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  margin-right: 4px;
+  margin-right: 1px;
   padding: 5px 9px;
 }
 
-.catalog-pages-list a:hover {
+.catalog-pages-list a:hover,
+.catalog-pages-list a:focus {
   padding: 5px 9px;
   background-color: var(--basic-extra-white);
+  border-radius: 50%;
+}
+
+.catalog-pages-list a:active {
+  padding: 5px 9px;
+  background-color: var(--basic-white);
+  color: var(--basic-black);
   border-radius: 50%;
 }
 
@@ -1635,4 +1745,31 @@ h1 {
   background-color: var(--basic-white);
   border-radius: 50%;
   color: var(--basic-black);
+  position: relative;
+}
+
+.on-page::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -24px;
+  background-color: pink;
+  background-image: url(..img/catalog/back.svg);
+  width: 7px;
+  height: 12px;
+}
+
+.last-page {
+  position: relative;
+}
+
+.last-page::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 36px;
+  background-color: pink;
+  background-image: url(..img/catalog/forward.svg);
+  width: 7px;
+  height: 12px;
 }

@@ -24,7 +24,7 @@
           <!-- <div class="main-navigation-wrapper"> -->
             <div class="wrapper">
               <ul class="site-navigation">
-                <li><a href=""><span>Каталог</span></a>
+                <li class="catalog"><a href="catalog.html"><span>Каталог</span></a>
                   <ul class="catalog-items">
                     <li><a href="" class="new">Новинки</a></li>
                     <li><a href="catalog.html">Сливочное</a></li>
@@ -37,13 +37,13 @@
                 <li><a href="blank.html"><span>О компании</span></a></li>
               </ul>
               <ul class="user-navigation">
-                <li><button type="button" class="search-button"></button>
+                <li class="search"><button type="button" class="search-button" aria-label="Поиск"></button>
                   <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                     <label for="search-name" class="visually-hidden">Поиск продукции</label>
                     <input id="search-name" type="search" name="search" placeholder="Крем-брюле">
                   </form>
                 </li>
-                <li class="entrance">Вход
+                <li class="entrance"><a href="">Вход</a>
                   <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
                     <label for="entrance-login" class="visually-hidden">Введите email</label>
                     <input id="entrance-login" type="email" name="login" placeholder="email@example.com" required>
@@ -120,7 +120,7 @@
                 <div class="circle"><a href=""><img src="img/index/cream1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a></div>
                 <p>310 ₽<span>/кг</span></p>
                 <h3><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-                <div class="visually-hidden">
+                <div class="quick-view">
                   <a href="" class="button">Быстрый просмотр</a>
                 </div>
               </article>
@@ -130,7 +130,7 @@
                 <div class="circle"><a href=""><img src="img/index/cream2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a></div>
                 <p>380 ₽<span>/кг</span></p>
                 <h3><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
-                <div class="visually-hidden">
+                <div class="quick-view">
                   <a href="" class="button">Быстрый просмотр</a>
                 </div>
               </article>
@@ -139,8 +139,8 @@
               <article class="hit">
                 <div class="circle"><a href=""><img src="img/index/cream3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a></div>
                 <p>355 ₽<span>/кг</span></p>
-                <h3><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-                <div class="visually-hidden">
+                <h3><a href="">Сливочно-клубничное с&nbsp;присыпкой из белого шоколада</a></h3>
+                <div class="quick-view">
                   <a href="" class="button">Быстрый просмотр</a>
                 </div>
               </article>
@@ -149,8 +149,8 @@
               <article class="hit">
                 <div class="circle"><a href=""><img src="img/index/cream4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a></div>
                 <p>415 ₽<span>/кг</span></p>
-                <h3><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
-                <div class="visually-hidden">
+                <h3><a href="">Сливочное крем-брюле с&nbsp;карамельной подливкой</a></h3>
+                <div class="quick-view">
                   <a href="" class="button">Быстрый просмотр</a>
                 </div>
               </article>
@@ -199,7 +199,7 @@
             <a href="tel:88124502525">8 812 450-25-25</a><br>
             (с 10 до 20 ежедневно)
           </p>
-          <button type="submit" class="button">Форма обратной связи</button>
+          <button type="submit" class="button feedback-button">Форма обратной связи</button>
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <button type="button" class="close-button" aria-label="Закрыть"></button>
             <p class="form-header">Мы обязательно вам ответим!</p>
@@ -209,13 +209,13 @@
             </div>
             <div>
               <label for="feedback-login" class="visually-hidden">Введите email</label>
-              <input id="feedback-login" type="email" name="login" placeholder="email@example.com" required>
+              <input id="feedback-login" type="email" name="login" placeholder="email@example.com">
             </div>
             <div>
               <label for="feedback-commentary" class="visually-hidden">Оставьте комментарий</label>
-              <textarea rows="10" cols="45" name="feedback" placeholder="В свободной форме" required></textarea>
+              <textarea rows="10" cols="45" name="feedback" placeholder="В свободной форме"></textarea>
             </div>
-            <button type="submit" class="button">Отправить</button>
+            <button type="submit" class="button send-button">Отправить</button>
           </form>
         </div>
       </section>
@@ -242,6 +242,6 @@
       </footer>
     </div>
   </div>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
