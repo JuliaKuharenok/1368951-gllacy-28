@@ -58,14 +58,14 @@
                     <tr>
                       <button type="button" class="close-button1" aria-label="Закрыть"></button>
                       <td class="goods1">Пломбир с апельсиновым джемом</td>
-                      <td class="">1,5 кг х <span>200 руб.</span></td>
+                      <td class="multiplication">1,5 кг х <span>200 руб.</span></td>
                       <td class="full-price">300 руб.</td>
                     </tr>
                     <tr>
                       <button type="button" class="close-button2" aria-label="Закрыть"></button>
                       <td class="goods2">Клубничный пломбир с присыпкой из белого шоколада</td>
-                      <td>1,5 кг х <span>300 руб.</span></td>
-                      <td>450 руб.</td>
+                      <td class="multiplication">1,5 кг х <span>300 руб.</span></td>
+                      <td class="full-price">450 руб.</td>
                     </tr>
                     </table>
                     <div>
@@ -116,24 +116,20 @@
         <legend>Жирность:</legend>
           <ul class="fat">
             <li class="filter-option">
-              <label class="radio">
-                <input type="radio" name="fat-content" value="0%" class="visually-hidden">
-              0%</label>
+                <input type="radio" name="fat-content" value="0%" id="filter-0" class="visually-hidden filter-input-radio">
+              <label for="filter-0">0%</label>
             </li>
             <li class="filter-option">
-              <label class="radio radio-checked">
-                <input type="radio" name="fat-content" value="lessThan10%" class="visually-hidden">
-              до 10%</label>
+                <input type="radio" name="fat-content" value="lessThan10%" id="filter-10" class="visually-hidden filter-input-radio" checked>
+              <label for="filter-10">до 10%</label>
             </li>
             <li class="filter-option">
-              <label class="radio">
-                <input type="radio" name="fat-content" value="lessThan30%" class="visually-hidden">
-              до 30%</label>
+                <input type="radio" name="fat-content" value="lessThan30%" id="filter-30" class="visually-hidden filter-input-radio">
+              <label for="filter-30">до 30%</label>
             </li>
             <li class="filter-option">
-              <label class="radio">
-                <input type="radio" name="fat-content" value="moreThan30%" class="visually-hidden">
-              выше 30%</label>
+                <input type="radio" name="fat-content" value="moreThan30%" id="filter-more-30" class="visually-hidden filter-input-radio">
+              <label for="filter-more-30">выше 30%</label>
             </li>
           </ul>
         </fieldset>
@@ -141,29 +137,24 @@
         <legend>Наполнители:</legend>
           <ul class="filling">
             <li class="filter-option">
-              <label class="checkbox-checked">
-                <input type="checkbox" name="chokolate" checked class="visually-hidden">
-              шоколадные</label>
+                <input type="checkbox" name="chokolate" id="chokolate" class="visually-hidden filter-input-checkbox" checked>
+              <label for="chokolate">шоколадные</label>
             </li>
             <li class="filter-option">
-              <label class="checkbox-checked">
-                <input type="checkbox" name="sugar-powders" checked class="visually-hidden">
-              сахарные присыпки</label>
+                <input type="checkbox" name="sugar-powders" id="sugar-powders" class="visually-hidden filter-input-checkbox" checked>
+              <label for="sugar-powders">сахарные присыпки</label>
             </li>
             <li class="filter-option">
-              <label class="checkbox">
-                <input type="checkbox" name="fruits" class="visually-hidden">
-              фрукты</label>
+                <input type="checkbox" name="fruits" id="fruits" class="visually-hidden filter-input-checkbox">
+              <label for="fruits">фрукты</label>
             </li>
             <li class="filter-option">
-              <label class="checkbox">
-                <input type="checkbox" name="syrops" class="visually-hidden">
-              сиропы</label>
+                <input type="checkbox" name="syrops" id="syrops" class="visually-hidden filter-input-checkbox">
+              <label for="syrops">сиропы</label>
             </li>
             <li class="filter-option">
-              <label class="checkbox">
-                <input type="checkbox" name="jelly" class="visually-hidden">
-              джемы</label>
+                <input type="checkbox" name="jelly" id="jelly" class="visually-hidden filter-input-checkbox">
+              <label for="jelly">джемы</label>
             </li>
           </ul>
         </fieldset>
@@ -316,8 +307,8 @@
       </ul>
       <ul aria-label="Информация" class="information">
         <li><a href="blank.html"><span>Для поставщиков</span></a></li>
-        <li><a href="blank.html">О производстве</a></li>
         <li><a href="blank.html">Наши документы</a></li>
+        <li><a href="blank.html">О производстве</a></li>
         <li><a href="blank.html">Экологические стандарты</a></li>
       </ul>
       <div aria-label="Разработано" class="developed">
