@@ -469,7 +469,6 @@ img {
 
 .cart-full {
   background: var(--basic-white);
-  color: var(--basic-black);
   border-radius: 20px;
   padding-top: 9px;
   padding-left: 44px;
@@ -477,39 +476,34 @@ img {
   position: relative;
 }
 
+.cart-full a {
+  color: var(--basic-black);
+}
+
 .cart-content {
-  position: absolute;
-  right: 0;
-  top: 35px;
-  z-index: 1;
+  display: none;
+  width: 539px;
   background-color: var(--basic-cream);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   font-weight: normal;
   font-size: 13px;
   line-height: 16px;
-  padding-top: 0;
+  padding-top: 0px;
   padding-right: 14px;
   padding-bottom: 21px;
-  padding-right: 14px;
-  padding-left: 57px;
+  padding-left: 11px;
 }
 
 table {
-  border-collapse: collapse;
+  border-spacing: 20px;
   width: 100%;
+  border-bottom: 1px solid #CACAC7;
+  color: var(--basic-black);
 }
 
-.goods1 {
-  width: 247px;
-}
-
-.multiplication {
-  width: 121px;
-}
-
-.full-price  {
-  width: 50px;
+.cart-content img {
+  border-radius: 50%;
 }
 
 .cart-content span {
@@ -520,8 +514,7 @@ table {
   font-weight: bold;
   font-size: 15px;
   line-height: 16px;
-  margin-top: 6px;
-  margin-bottom: 18px;
+  color: var(--basic-black);
 }
 
 .cart-content div {
@@ -537,40 +530,14 @@ table {
   line-height: 16px;
 }
 
-.goods1 {
-  position: relative;
-}
-
-.goods1::before {
-  content:"";
-  position: absolute;
-  left: -45px;
-  top: 2px;
-  width: 33px;
-  height: 33px;
-  background-image: url("../img/catalog/icecream1.jpg");
-  border-radius: 50%;
-}
-
-.goods2 {
-  position: relative;
-}
-
-.goods2::before {
-  content:"";
-  position: absolute;
-  left: -45px;
-  top: 2px;
-  width: 33px;
-  height: 33px;
-  background-image: url("../img/catalog/icecream3.jpg");
-  border-radius: 50%;
+.confirm-button a {
+  color: var(--basic-white);
 }
 
 .cart-content .close-button1 {
   position: absolute;
   left: 12px;
-  top: 45px;
+  top: 32px;
   height: 11px;
   width: 11px;
   padding: 0;
@@ -581,7 +548,7 @@ table {
 .cart-content .close-button2 {
   position: absolute;
   left: 12px;
-  top: 105px;
+  top: 92px;
   height: 11px;
   width: 11px;
   padding: 0;
@@ -625,6 +592,15 @@ table {
 
 .cart-content .close-button2::after {
   transform: rotate(-45deg);
+}
+
+.cart-full:hover .cart-content,
+.cart-full:focus .cart-content {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  z-index: 1;
 }
 
 .open-hours {
@@ -1138,7 +1114,6 @@ table {
   background-image: url("../img/index/map.png");
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
   width: 100%;
   height: 430px;
   margin-top: 40px;
@@ -1205,23 +1180,27 @@ table {
 }
 
 .feedback-form {
-  position: absolute;
+  position: fixed;
+  top: 118px;
+  left: 35%;
+  z-index: 1;
   display: flex;
   display: none;
   flex-direction: column;
   background-color: var(--basic-cream);
   border-radius: 6px;
-  position: fixed;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 25px;
   padding-top: 20px;
 }
 
-.contact-information .form-header {
+.feedback-form .form-header {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
+  color: var(--basic-black);
+  margin-top: 0;
 }
 
 .feedback-form input {
@@ -1243,9 +1222,12 @@ table {
   padding-right: 14px;
 }
 
-.feedback-form .button {
-  align-self: flex-end;
-  margin-top: 25px;
+.feedback-form .send-button {
+  align-self: flex-start;
+  border: none;
+  color: var(--basic-white);
+  padding: 14px 24px;
+  margin-top: 20px;
 }
 
 .feedback-form .close-button {
@@ -1255,7 +1237,8 @@ table {
   height: 18px;
   width: 18px;
   padding: 0;
-  background-color: transparent;
+  background-color: var(--basic-cream);
+  border: none;
 }
 
 .feedback-form .close-button::after,
@@ -1363,8 +1346,6 @@ table {
   padding: 0;
   margin: 0;
   padding-top: 26px;
-  padding-left: 38px;
-  padding-right: 52px;
 }
 
 .information a {
@@ -1511,16 +1492,10 @@ h1 {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
-}
-
-.sorting-principle::after {     /* именно тут не отображается, пробовала в другом месте, все ок( */
-  content: "";
-  position: absolute;
-  width: 11px;
-  height: 10px;
   background-image: url("../img/catalog/arrow.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 92%;
+  cursor: pointer;
 }
 
 .price {
