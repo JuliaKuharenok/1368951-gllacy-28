@@ -572,6 +572,10 @@ table {
   z-index: 1;
 }
 
+.form-wrapper {
+  padding-top: 10px;
+}
+
 .open-hours {
   text-align: right;
   font-weight: bold;

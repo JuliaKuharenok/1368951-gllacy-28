@@ -16,7 +16,6 @@
           <a class="main-header-logo">
             <img src="img/header/gllacy.svg" width="154" height="64" alt="Логотип магазина Глейси">
           </a>
-          <!-- <div class="main-navigation-wrapper"> -->
             <div class="wrapper">
               <ul class="site-navigation">
                 <li class="catalog"><a href="catalog.html"><span>Каталог</span></a>
@@ -33,12 +32,15 @@
               </ul>
               <ul class="user-navigation">
                 <li class="search"><button type="button" class="search-button" aria-label="Поиск"></button>
+                  <div class="form-wrapper">
                   <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                     <label for="search-name" class="visually-hidden">Поиск продукции</label>
                     <input id="search-name" type="search" name="search" placeholder="Крем-брюле">
                   </form>
+                </div>
                 </li>
                 <li class="entrance"><a href="">Вход</a>
+                  <div class="form-wrapper">
                   <form class="entrance-form" action="https://echo.htmlacademy.ru" method="post">
                     <label for="entrance-login" class="visually-hidden">Введите email</label>
                     <input id="entrance-login" type="email" name="login" placeholder="email@example.com" required>
@@ -52,6 +54,7 @@
                       </div>
                     </div>
                   </form>
+                </div>
                 </li>
                 <li class="cart-empty"><a href="">Пусто</a></li>
               </ul>
