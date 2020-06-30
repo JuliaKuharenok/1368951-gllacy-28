@@ -1065,6 +1065,7 @@ table {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-right: 187px;
+  width: 368px;
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 6px;
 }
@@ -1190,7 +1191,6 @@ table {
 .feedback-form input {
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 4px;
-  width: 368px;
   margin-bottom: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
