@@ -1190,6 +1190,7 @@ table {
 .feedback-form input {
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 4px;
+  width: 368px;
   margin-bottom: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -1232,7 +1233,7 @@ table {
   position: absolute;
   top: 8px;
   left: 0;
-  width: 18px; //temp comment
+  width: 18px;
   height: 2px;
   background-color: #231F20;
 }
