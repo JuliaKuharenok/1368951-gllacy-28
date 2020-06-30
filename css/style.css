@@ -1245,11 +1245,11 @@ table {
   transform: rotate(-45deg);
 }
 
-input {
+/*input {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-}
+} */
 
 .popup-show {
   display: block;
