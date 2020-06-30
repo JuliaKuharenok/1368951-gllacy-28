@@ -454,7 +454,7 @@ img {
   position: relative;
 }
 
-.cart-full::after {
+.cart-full::before {
   content:"";
   position: absolute;
   top: 6px;
@@ -572,8 +572,15 @@ table {
   z-index: 1;
 }
 
-.form-wrapper {
-  padding-top: 10px;
+.entrance::after,
+.cart-full::after,
+.search::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 150px;
+  height: 20px;
+  left: -20px;
 }
 
 .open-hours {
@@ -1235,6 +1242,12 @@ table {
 
 .feedback-form .close-button::after {
   transform: rotate(-45deg);
+}
+
+input {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .popup-show {
