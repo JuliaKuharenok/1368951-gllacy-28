@@ -16,7 +16,7 @@
       </a>
       <div class="wrapper">
         <ul class="site-navigation">
-          <li><a href="" class="on-page"><span>Каталог</span></a>
+          <li><a href="" class="on-page" tabindex="-1"><span>Каталог</span></a>
             <ul class="catalog-items">
               <li><a href="" class="new">Новинки</a></li>
               <li class="on-page">Сливочное</li>
@@ -88,7 +88,7 @@
   </header>
   <main class="container">
     <ul class="pages-navigation">
-      <li><a href="index.html" tabindex="-1"><span>Главная</span></a></li>
+      <li><a href="index.html"><span>Главная</span></a></li>
       <li><a href="catalog.html"><span>Каталог</span></a></li>
       <li>Сливочное</li>
     </ul>
@@ -111,8 +111,8 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="toggle toggle-min"></div>
-              <div class="toggle toggle-max"></div>
+              <div class="toggle toggle-min" tabindex="0"></div>
+              <div class="toggle toggle-max" tabindex="0"></div>
             </div>
           </div>
         </fieldset>
@@ -120,19 +120,19 @@
           <legend>Жирность:</legend>
           <ul class="fat">
             <li class="filter-option">
-              <input type="radio" name="fat-content" value="0%" id="filter-0" class="visually-hidden filter-input-radio" tabindex="1">
+              <input type="radio" name="fat-content" value="0%" id="filter-0" class="visually-hidden filter-input-radio">
               <label for="filter-0">0%</label>
             </li>
             <li class="filter-option">
-              <input type="radio" name="fat-content" value="lessThan10%" id="filter-10" class="visually-hidden filter-input-radio" checked tabindex="2">
+              <input type="radio" name="fat-content" value="lessThan10%" id="filter-10" class="visually-hidden filter-input-radio" checked>
               <label for="filter-10">до 10%</label>
             </li>
             <li class="filter-option">
-              <input type="radio" name="fat-content" value="lessThan30%" id="filter-30" class="visually-hidden filter-input-radio" tabindex="3">
+              <input type="radio" name="fat-content" value="lessThan30%" id="filter-30" class="visually-hidden filter-input-radio">
               <label for="filter-30">до 30%</label>
             </li>
             <li class="filter-option">
-              <input type="radio" name="fat-content" value="moreThan30%" id="filter-more-30" class="visually-hidden filter-input-radio" tabindex="4">
+              <input type="radio" name="fat-content" value="moreThan30%" id="filter-more-30" class="visually-hidden filter-input-radio">
               <label for="filter-more-30">выше 30%</label>
             </li>
           </ul>

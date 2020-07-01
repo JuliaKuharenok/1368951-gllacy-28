@@ -262,7 +262,7 @@ img {
 }
 
 .catalog:hover .catalog-items,
-.catalog:focus .catalog-items {
+.catalog:focus-within .catalog-items {
   display: block;
   position: absolute;
   left: -4px;
@@ -1658,6 +1658,10 @@ h1 {
   border-radius: 50%;
 }
 
+.filter-input-radio:hover .filter-input-radio + label::before {
+  border: 2px solid blue;
+}
+
 .filling {
   display: flex;
   background: var(--basic-extra-white);
@@ -1760,20 +1764,20 @@ h1 {
 
 .catalog-pages-list a:hover,
 .catalog-pages-list a:focus {
-  padding: 5px 9px;
+  padding: 3px 9px;
   background-color: var(--basic-extra-white);
   border-radius: 50%;
 }
 
 .catalog-pages-list a:active {
-  padding: 5px 9px;
+  padding: 3px 9px;
   background-color: var(--basic-white);
   color: var(--basic-black);
   border-radius: 50%;
 }
 
 .catalog-pages-list .first-page {
-  padding: 5px 9px;
+  padding: 3px 9px;
   background-color: var(--basic-white);
   border-radius: 50%;
   color: var(--basic-black);
@@ -1781,33 +1785,39 @@ h1 {
   pointer-events: none;
 }
 
-.first-page::before {
+.back-button,
+.forward-button {
+  position: relative;
+  pointer-events: none;
+}
+
+.back-button::before {
   content: "";
   position: absolute;
   top: 8px;
-  left: -24px;
+  left: -4px;
   background-image: url("../img/catalog/back.svg");
   width: 7px;
   height: 12px;
   cursor: pointer;
 }
 
-.last-page {
-  position: relative;
-}
-
-.last-page::after {
+.forward-button::after {
   content: "";
   position: absolute;
   top: 8px;
-  left: 42px;
+  left: 12px;
   background-image: url("../img/catalog/forward.svg");
   width: 7px;
   height: 12px;
   cursor: pointer;
 }
 
-.back-button,
-.forward-button {
-  pointer-events: none;
+.back-button:hover::before,
+.forward-button:hover::after,
+.back-button:focus::before,
+.forward-button:focus::after {
+  padding: 3px 9px;
+  background-color: var(--basic-extra-white);
+  border-radius: 50%;
 }
