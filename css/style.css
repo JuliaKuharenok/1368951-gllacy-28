@@ -810,7 +810,8 @@ table {
   position: relative;
 }
 
-.icecream-list article:hover::before {
+.icecream-list article:hover::before,
+.icecream article:focus-within {
   content: "";
   position: absolute;
   z-index: 1;
@@ -823,7 +824,7 @@ table {
 }
 
 .icecream article:hover .quick-view,
-.icecream a:focus .quick-view {
+.icecream article:focus-within .quick-view {
   display: block;
   position: absolute;
   z-index: 1;
@@ -832,7 +833,7 @@ table {
   margin-bottom: 21px;
 }
 
-.icecream a:focus::before {
+/*.icecream a:focus::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -843,7 +844,7 @@ table {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
+} */
 
 .icecream-list {
   display: grid;
