@@ -1,3 +1,4 @@
+var feedback = document.querySelector(".feedback");
 var feedbackButton = document.querySelector(".feedback-button");
 var feedbackForm = document.querySelector(".feedback-form");
 var feedbackClose = document.querySelector(".close-button");
@@ -18,6 +19,7 @@ try {
 feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackForm.classList.add("popup-show");
+  feedback.classList.add("popup-show");
   if (storage) {
     feedbackLogin.value = storage;
   }
