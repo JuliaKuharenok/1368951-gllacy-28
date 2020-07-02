@@ -811,7 +811,7 @@ table {
 }
 
 .icecream-list article:hover::before,
-.icecream article:focus-within {
+.icecream article:focus-within::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -832,19 +832,6 @@ table {
   color: var(--basic-white);
   margin-bottom: 21px;
 }
-
-/*.icecream a:focus::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: -6px;
-  left: -12px;
-  width: 293px;
-  height: 402px;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-} */
 
 .icecream-list {
   display: grid;
@@ -1658,7 +1645,7 @@ h1 {
   border-radius: 50%;
 }
 
-.filter-input-radio:hover .filter-input-radio + label::before {
+.filter-input-radio:focus + label::before {
   border: 2px solid blue;
 }
 
@@ -1707,6 +1694,10 @@ h1 {
   background-image: url("../img/catalog/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-checkbox:focus + label::before {
+  border: 2px solid blue;
 }
 
 .apply-button {
