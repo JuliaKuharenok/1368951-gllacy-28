@@ -319,14 +319,16 @@ img {
   border-radius: 4px;
 }
 
-.search:hover .search-form {
+.search:hover .search-form,
+.search:focus-within .search-form {
   display: block;
   position: absolute;
   right: 0px;
   top: 35px;
 }
 
-.search:hover .search-button {
+.search:hover .search-button,
+.search:focus-within .search-button {
   background: var(--basic-white);
   background-image: url("../img/header/search2.svg");
   background-repeat: no-repeat;
@@ -351,7 +353,7 @@ img {
 }
 
 .entrance:hover::before,
-.entrance:focus::before {
+.entrance:focus-within::before {
   background-image: url("../img/header/enter2.svg");
 }
 
@@ -420,15 +422,18 @@ img {
   margin-bottom: 7px;
 }
 
-.entrance:hover {
+.entrance:hover,
+.entrance:focus-within {
   background: var(--basic-white);
 }
 
-.entrance:hover a {
+.entrance:hover a,
+.entrance:focus-within a {
   color: var(--basic-black);
 }
 
-.entrance:hover .entrance-form {
+.entrance:hover .entrance-form,
+.entrance:focus-within .entrance-form {
   display: block;
   position: absolute;
   z-index: 1;
@@ -568,7 +573,7 @@ table {
 }
 
 .cart-full:hover .cart-content,
-.cart-full:focus .cart-content {
+.cart-full:focus-within .cart-content {
   display: block;
   position: absolute;
   right: 0;
@@ -1749,21 +1754,21 @@ table {
   padding: 5px 9px;
 }
 
-.catalog-pages-list a:hover,
-.catalog-pages-list a:focus {
+.catalog-page:hover,
+.catalog-page:focus {
   padding: 3px 9px;
   background-color: var(--basic-extra-white);
   border-radius: 50%;
 }
 
-.catalog-pages-list a:active {
+.catalog-pages a:active {
   padding: 3px 9px;
   background-color: var(--basic-white);
   color: var(--basic-black);
   border-radius: 50%;
 }
 
-.catalog-pages-list .first-page {
+.catalog-pages-list .current-page {
   padding: 3px 9px;
   background-color: var(--basic-white);
   border-radius: 50%;
@@ -1775,7 +1780,6 @@ table {
 .back-button,
 .forward-button {
   position: relative;
-  pointer-events: none;
 }
 
 .back-button::before {
@@ -1798,13 +1802,4 @@ table {
   width: 7px;
   height: 12px;
   cursor: pointer;
-}
-
-.back-button:hover::before,
-.forward-button:hover::after,
-.back-button:focus::before,
-.forward-button:focus::after {
-  padding: 3px 9px;
-  background-color: var(--basic-extra-white);
-  border-radius: 50%;
 }
