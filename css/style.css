@@ -279,7 +279,6 @@ img {
   margin-top: 14px;
   margin-bottom: 20px;
   list-style: none;
-  font-family: roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -725,7 +724,6 @@ table {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: roboto;
 }
 
 .offers-list h3 {
@@ -1204,17 +1202,18 @@ table {
 .feedback-form {
   position: fixed;
   top: 118px;
-  left: 35%;
+  left: 33.5%;
   z-index: 1;
   display: flex;
   display: none;
   flex-direction: column;
   background-color: var(--basic-cream);
+  width: 428px;
   border-radius: 6px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   padding-left: 24px;
   padding-right: 25px;
-  padding-top: 20px;
+  padding-top: 15px;
   animation: bounce 0.6s;
 }
 
@@ -1224,24 +1223,27 @@ table {
   line-height: 28px;
   color: var(--basic-black);
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .feedback-form input {
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 4px;
   margin-bottom: 20px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 11px;
+  padding-bottom: 12px;
   padding-left: 14px;
-  padding-right: 147px;
+  padding-right: 85px;
 }
 
 .feedback-form textarea {
+  width: 400px;
+  height: 128px;
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 4px;
-  padding-top: 16px;
+  padding-top: 13px;
   padding-left: 14px;
-  padding-bottom: 16px;
+  padding-bottom: 13px;
   padding-right: 14px;
   resize: none;
 }
@@ -1256,8 +1258,8 @@ table {
 
 .feedback-form .close-button {
   position: absolute;
-  right: 15px;
-  top: 20px;
+  right: 17px;
+  top: 15px;
   height: 18px;
   width: 18px;
   padding: 0;
@@ -1271,7 +1273,7 @@ table {
   position: absolute;
   top: 8px;
   left: 0;
-  width: 18px;
+  width: 20px;
   height: 2px;
   background-color: #231F20;
 }

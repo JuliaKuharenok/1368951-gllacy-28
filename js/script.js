@@ -7,6 +7,14 @@ var feedbackName = document.querySelector("#feedback-name");
 var feedbackLogin = document.querySelector("#feedback-login");
 var feedbackMessage = document.querySelector("#feedback-name");
 
+var firstSliderControl = document.querySelector(".first-slider-control");
+var secondSliderControl = document.querySelector(".second-slider-control");
+var thirdSliderControl = document.querySelector(".third-slider-control");
+var firstSliderItem = document.querySelector(".first-slider-item");
+var secondSliderItem = document.querySelector(".second-slider-item");
+var thirdSliderItem = document.querySelector(".third-slider-item");
+var siteWrapper = document.querySelector(".site-wrapper");
+
 var isStorageSupport = true;
 var storage = "";
 
@@ -51,4 +59,49 @@ window.addEventListener("keydown", function (evt) {
       feedbackForm.classList.remove("popup-error");
     }
   }
+});
+
+firstSliderControl.addEventListener("click", function (evt) {
+  if (secondSliderControl.classList.contains("current")) {
+    secondSliderControl.classList.remove("current");
+    secondSliderItem.classList.remove("slide-current");
+    siteWrapper.classList.remove("site-wrapper-2");
+  } else if (thirdSliderControl.classList.contains("current")) {
+    thirdSliderControl.classList.remove("current");
+    thirdSliderItem.classList.remove("slide-current");
+    siteWrapper.classList.remove("site-wrapper-3");
+  }
+  firstSliderControl.classList.add("current");
+  firstSliderItem.classList.add("slide-current");
+  siteWrapper.classList.add("site-wrapper-1");
+});
+
+secondSliderControl.addEventListener("click", function (evt) {
+  if (thirdSliderControl.classList.contains("current")) {
+    thirdSliderControl.classList.remove("current");
+    thirdSliderItem.classList.remove("slide-current");
+    siteWrapper.classList.remove("site-wrapper-3");
+  } else if (firstSliderControl.classList.contains("current")) {
+    firstSliderControl.classList.remove("current");
+    firstSliderItem.classList.remove("slide-current");
+    siteWrapper.classList.remove("site-wrapper-1");
+  }
+  secondSliderControl.classList.add("current");
+  secondSliderItem.classList.add("slide-current");
+  siteWrapper.classList.add("site-wrapper-2");
+});
+
+thirdSliderControl.addEventListener("click", function (evt) {
+  if (firstSliderControl.classList.contains("current")) {
+    firstSliderControl.classList.remove("current");
+    firstSliderItem.classList.remove("slide-current");
+    siteWrapper.classList.remove("site-wrapper-1");
+  } else if (secondSliderControl.classList.contains("current")) {
+    secondSliderControl.classList.remove("current");
+    secondSliderItem.classList.remove("slide-current");
+    siteWrapper.classList.remove("site-wrapper-2");
+  }
+  thirdSliderControl.classList.add("current");
+  thirdSliderItem.classList.add("slide-current");
+  siteWrapper.classList.add("site-wrapper-3");
 });
