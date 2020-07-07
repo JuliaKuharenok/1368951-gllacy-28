@@ -37,6 +37,7 @@ feedbackButton.addEventListener("click", function (evt) {
 feedbackClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackForm.classList.remove("popup-show");
+  feedback.classList.remove("popup-show");
   feedbackForm.classList.remove("popup-error");
 });
 

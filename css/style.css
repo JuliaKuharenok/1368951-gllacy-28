@@ -90,6 +90,25 @@ img {
   background-color: #F26843;
 }
 
+input {
+  font-weight: 600;
+}
+
+input::placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+input:hover,
+textarea:hover {
+  outline: 2px solid rgba(178, 178, 178, 0.52);
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -177,7 +196,7 @@ img {
   color: var(--basic-black);
   background: var(--basic-white);
   border-radius: 26px;
-  padding-top: 9px 14px;
+  padding: 9px 14px;
 }
 
 .site-navigation a:active {
@@ -187,13 +206,16 @@ img {
   padding: 9px 14px;
 }
 
+.site-navigation span:active {
+  border-bottom: none;
+}
+
 .on-page {
   background: var(--basic-dark-bordo);
   border-radius: 26px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 13px;
-  pointer-events: none;
 }
 
 .on-page span {
@@ -505,7 +527,7 @@ img {
   padding-left: 14px;
 }
 
-table {
+.cart-table {
   border-spacing: 10px;
   width: 100%;
   border-bottom: 1px solid #CACAC7;
@@ -686,9 +708,12 @@ table {
   pointer-events: none;
 }
 
-.slider-controls button:hover,
-.slider-controls button:focus {
+.slider-controls button:hover {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slider-controls button:focus {
+  background-color: var(--basic-white);
 }
 
 .advertisment {
@@ -807,7 +832,7 @@ table {
   position: relative;
 }
 
-.icecream-list article {
+.icecream-item {
   display: flex;
   flex-direction: column;
 	justify-content: center;
@@ -815,8 +840,8 @@ table {
   position: relative;
 }
 
-.icecream-list article:hover::before,
-.icecream article:focus-within::before {
+.icecream-item:hover::before,
+.icecream-item:focus-within::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -828,8 +853,8 @@ table {
   border-radius: 4px;
 }
 
-.icecream article:hover .quick-view,
-.icecream article:focus-within .quick-view {
+.icecream-item:hover .quick-view,
+.icecream-item:focus-within .quick-view {
   display: block;
   position: absolute;
   z-index: 1;
@@ -1117,7 +1142,7 @@ table {
 }
 
 .map {
-  background-color: inherit;
+  background-color: #F7F1D9;
   background-image: url("../img/index/map.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -1197,16 +1222,16 @@ table {
   width: 100%;
   height: 100%;
   position: relative;
+  z-index: 1;
+  background: #E5E5E5;
 }
 
 .feedback-form {
   position: fixed;
   top: 118px;
   left: 33.5%;
-  z-index: 1;
-  display: flex;
+  z-index: 2;
   display: none;
-  flex-direction: column;
   background-color: var(--basic-cream);
   width: 428px;
   border-radius: 6px;
@@ -1249,11 +1274,14 @@ table {
 }
 
 .feedback-form .send-button {
-  align-self: flex-end;
+  display: block;
   border: none;
   color: var(--basic-white);
-  padding: 14px 24px;
-  margin-top: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 24px;
+  margin-top: 22px;
+  margin-left: auto;
 }
 
 .feedback-form .close-button {
@@ -1657,8 +1685,21 @@ table {
   border-radius: 50%;
 }
 
+.filter-input-radio:hover + label::before {
+  border: var(--basic-white);
+}
+
+.filter-input-radio:checked:hover + label::after {
+  background-color: var(--basic-white);
+}
+
 .filter-input-radio:focus + label::before {
   outline: 2px solid blue;
+  border: var(--basic-white);
+}
+
+.filter-input-radio:checked:focus + label::after {
+  background-color: var(--basic-white);
 }
 
 .filling {
@@ -1692,6 +1733,7 @@ table {
   width: 24px;
   height: 20px;
   background-image: url("../img/catalog/checkbox-off.svg");
+  opacity: 0.8;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1704,12 +1746,18 @@ table {
   width: 24px;
   height: 20px;
   background-image: url("../img/catalog/checkbox-on.svg");
+  opacity: 0.8;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
+.filter-input-checkbox:hover + label::before {
+  opacity: 1;
+}
+
 .filter-input-checkbox:focus + label::before {
   outline: 2px solid blue;
+  opacity: 1;
 }
 
 .apply-button {
@@ -1762,7 +1810,7 @@ table {
   font-size: 16px;
   line-height: 18px;
   margin-right: 3px;
-  padding: 5px 9px;
+  padding: 3px 9px;
 }
 
 .catalog-page:hover,
