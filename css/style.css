@@ -115,7 +115,7 @@ textarea:focus {
 
 input:hover,
 textarea:hover {
-  outline: 2px solid var(--special-input-grey);
+  outline: 2px solid var(--basic-input-grey);
 }
 
 .visually-hidden {
@@ -1122,7 +1122,7 @@ textarea:hover {
   padding-top: 12px;
   padding-bottom: 12px;
   width: 352px;
-  border: 1px solid var(--special-input-grey);
+  border: 1px solid var(--basic-input-grey);
   border-radius: 6px;
 }
 
@@ -1261,7 +1261,7 @@ textarea:hover {
 }
 
 .feedback-form input {
-  border: 1px solid var(--special-input-grey);
+  border: 1px solid var(--basic-input-grey);
   border-radius: 4px;
   margin-bottom: 20px;
   padding-top: 11px;
@@ -1273,7 +1273,7 @@ textarea:hover {
 .feedback-form textarea {
   width: 400px;
   height: 128px;
-  border: 1px solid var(--special-input-grey);
+  border: 1px solid var(--basic-input-grey);
   border-radius: 4px;
   padding-top: 13px;
   padding-left: 14px;
