@@ -44,6 +44,8 @@ feedbackClose.addEventListener("click", function (evt) {
 feedbackForm.addEventListener("submit", function (evt) {
   if (!feedbackName.value || !feedbackLogin.value || !feedbackMessage.value) {
     evt.preventDefault();
+    feedbackForm.classList.remove("popup-error");
+    feedbackForm.offsetWidth = feedbackForm.offsetWidth;
     feedbackForm.classList.add("popup-error");
   } else {
       if (isStorageSupport) {
