@@ -31,8 +31,10 @@
   --basic-white: #FFFFFF;
   --basic-light-black: #5A5A5A;
   --basic-black: #323232;
-  --basic-dark-grey: #696969;
+  /*--basic-light-grey: rgba(50, 50, 50);*/
   --basic-grey: #999999;
+  --basic-dark-grey: #696969;
+  --basic-input-grey: rgba(178, 178, 178, 0.52);
   --basic-light-red: #F26843;
   --basic-red: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --basic-light-bordo: #FBDED7;
@@ -43,7 +45,9 @@
   --basic-cream: #F8F7F4;
 
   --special-cross-black: #231F20;
-  --special-input-grey: #D3D3D2;
+  --special-header-input-grey: #D3D3D2;
+  --special-links-pink: rgba(255, 188, 158, 0.3);
+  --special-text-shadow: rgba(49, 50, 53, 0.5);
 
   --background-green: #849D8F;
   --background-grey: #8996A6;
@@ -111,7 +115,7 @@ textarea:focus {
 
 input:hover,
 textarea:hover {
-  outline: 2px solid rgba(178, 178, 178, 0.52);
+  outline: 2px solid var(--special-input-grey);
 }
 
 .visually-hidden {
@@ -343,7 +347,7 @@ textarea:hover {
   padding-left: 15px;
   padding-right: 150px;
   padding-bottom: 13px;
-  border: 1px solid var(--special-input-grey);
+  border: 1px solid var(--special-header-input-grey);
   border-radius: 4px;
 }
 
@@ -423,7 +427,7 @@ textarea:hover {
   padding-top: 15px;
   padding-bottom: 12px;
   padding-right: 80px;
-  border: 1px solid var(--special-input-grey);
+  border: 1px solid var(--special-header-input-grey);
   border-radius: 4px;
   margin-bottom: 20px;
 }
@@ -892,7 +896,7 @@ textarea:hover {
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
-  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  text-shadow: 0px 1px 3px var(--special-text-shadow);
   margin-top: -59px;
   margin-bottom: 26px;
 }
@@ -901,7 +905,7 @@ textarea:hover {
   font-weight: 600;
   font-size: 30px;
   line-height: 35px;
-  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  text-shadow: 0px 1px 3px var(--special-text-shadow);
   margin-left: 2px;
 }
 
@@ -913,7 +917,7 @@ textarea:hover {
 .icecream-list a:focus,
 .icecream-list a:active {
   color: var(--basic-pink);
-  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  border-bottom: 1px solid var(--special-links-pink);
 }
 
 .icecream-list .button {
@@ -1085,7 +1089,7 @@ textarea:hover {
 .blog a:hover,
 .blog a:focus {
   color: var(--basic-dark-pink);
-  border-bottom: 2px solid rgba(255, 188, 158, 0.3);
+  border-bottom: 2px solid var(--special-links-pink);
 }
 
 /* Mailing */
@@ -1118,7 +1122,7 @@ textarea:hover {
   padding-top: 12px;
   padding-bottom: 12px;
   width: 352px;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--special-input-grey);
   border-radius: 6px;
 }
 
@@ -1257,7 +1261,7 @@ textarea:hover {
 }
 
 .feedback-form input {
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--special-input-grey);
   border-radius: 4px;
   margin-bottom: 20px;
   padding-top: 11px;
@@ -1269,7 +1273,7 @@ textarea:hover {
 .feedback-form textarea {
   width: 400px;
   height: 128px;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--special-input-grey);
   border-radius: 4px;
   padding-top: 13px;
   padding-left: 14px;
@@ -1420,7 +1424,7 @@ textarea:hover {
 .information a:hover,
 .information a:focus {
   color: var(--basic-pink);
-  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  border-bottom: 1px solid var(--special-links-pink);
 }
 
 .information span::before {
@@ -1457,7 +1461,7 @@ textarea:hover {
 .developed a:hover,
 .developed a:focus {
   color: var(--basic-pink);
-  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  border-bottom: 1px solid var(--special-links-pink);
 }
 
 .developed .logo {
@@ -1500,7 +1504,7 @@ textarea:hover {
 
 .pages-navigation span:hover,
 .pages-navigation span:focus {
-  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  border-bottom: 1px solid var(--special-links-pink);
 }
 
 .pages-navigation::after,
