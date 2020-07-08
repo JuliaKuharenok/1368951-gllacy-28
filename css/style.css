@@ -1162,6 +1162,10 @@ textarea:hover {
   position: relative;
 }
 
+.map iframe {
+  z-index: 1;
+}
+
 /* Contact Information */
 
 .container {
