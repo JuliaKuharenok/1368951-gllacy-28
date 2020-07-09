@@ -167,6 +167,7 @@ img {
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
+  max-width: 700px;
 }
 
 .site-navigation a {
@@ -286,6 +287,7 @@ img {
 
 .user-navigation {
   display: flex;
+  align-self: flex-end;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -295,6 +297,7 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  max-width: 600px;
 }
 
 .user-navigation li {
