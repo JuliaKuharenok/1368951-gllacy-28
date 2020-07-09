@@ -1716,6 +1716,16 @@ textarea:hover {
   background-color: var(--basic-white);
 }
 
+.filter-input-radio:disabled + label::before {
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+.filter-input-radio:checked:disabled + label::after {
+  background-color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
 .filling {
   display: flex;
   background: var(--basic-extra-white);
@@ -1772,6 +1782,12 @@ textarea:hover {
 .filter-input-checkbox:focus + label::before {
   outline: 2px solid blue;
   opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label::before,
+.filter-input-checkbox:checked:disabled + label::before {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .apply-button {
