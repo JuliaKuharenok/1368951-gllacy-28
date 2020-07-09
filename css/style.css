@@ -216,7 +216,7 @@ textarea:hover {
   padding: 9px 14px;
 }
 
-.site-navigation span:active {
+.site-navigation a:active span {
   border-bottom: none;
 }
 
