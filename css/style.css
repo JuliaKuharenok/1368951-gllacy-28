@@ -100,25 +100,6 @@ img {
   background-color: var(--basic-light-red);
 }
 
-input {
-  font-weight: 600;
-}
-
-input::placeholder {
-  font-weight: 400;
-  color: var(--basic-grey);
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid rgba(46, 136, 228, 0.52);
-}
-
-input:hover,
-textarea:hover {
-  outline: 2px solid var(--basic-input-grey);
-}
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -344,11 +325,29 @@ textarea:hover {
 }
 
 .search-form input {
+  font-weight: 600;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 150px;
   padding-bottom: 13px;
   border: 1px solid var(--special-header-input-grey);
+  border-radius: 4px;
+}
+
+.search-form input::placeholder {
+  font-weight: 400;
+  color: var(--basic-grey);
+}
+
+.search-form input:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
+}
+
+.search-form input:hover {
+  outline: none;
+  border: 2px solid var(--basic-input-grey);
   border-radius: 4px;
 }
 
@@ -424,6 +423,7 @@ textarea:hover {
 }
 
 .entrance-form input {
+  font-weight: 600;
   padding-left: 13px;
   padding-top: 15px;
   padding-bottom: 12px;
@@ -431,6 +431,23 @@ textarea:hover {
   border: 1px solid var(--special-header-input-grey);
   border-radius: 4px;
   margin-bottom: 20px;
+}
+
+.entrance-form input::placeholder {
+  font-weight: 400;
+  color: var(--basic-grey);
+}
+
+.entrance-form input:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
+}
+
+.entrance-form input:hover {
+  outline: none;
+  border: 2px solid var(--basic-input-grey);
+  border-radius: 4px;
 }
 
 .entrance-form div {
@@ -1117,6 +1134,7 @@ textarea:hover {
 }
 
 .mailing input {
+  font-weight: 600;
   margin-right: 6px;
   margin-top: 41px;
   padding-left: 14px;
@@ -1125,6 +1143,23 @@ textarea:hover {
   width: 352px;
   border: 1px solid var(--basic-input-grey);
   border-radius: 6px;
+}
+
+.mailing input::placeholder {
+  font-weight: 400;
+  color: var(--basic-grey);
+}
+
+.mailing input:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
+}
+
+.mailing input:hover {
+  outline: none;
+  border: 2px solid var(--basic-input-grey);
+  border-radius: 4px;
 }
 
 .mailing button {
@@ -1266,6 +1301,7 @@ textarea:hover {
 }
 
 .feedback-form input {
+  font-weight: 600;
   border: 1px solid var(--basic-input-grey);
   border-radius: 4px;
   margin-bottom: 20px;
@@ -1273,6 +1309,25 @@ textarea:hover {
   padding-bottom: 12px;
   padding-left: 14px;
   padding-right: 85px;
+}
+
+.feedback-form input::placeholder {
+  font-weight: 400;
+  color: var(--basic-grey);
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  outline: none;
+  border: 2px solid var(--basic-input-grey);
+  border-radius: 4px;
 }
 
 .feedback-form textarea {
