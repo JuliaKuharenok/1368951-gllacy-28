@@ -800,7 +800,6 @@ img {
   display: flex;
   flex-direction: column;
   background-image: url("../img/index/malina.jpg");
-  background-repeat: no-repeat;
   width: 560px;
   background-color: #500008;
   border-radius: 16px;
@@ -824,7 +823,6 @@ img {
   display: flex;
   flex-direction: column;
   background-image: url("../img/index/chokolate.jpg");
-  background-repeat: no-repeat;
   width: 560px;
   background-color: 2E140A;
   border-radius: 16px;
