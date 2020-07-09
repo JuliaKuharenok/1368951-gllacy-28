@@ -346,12 +346,20 @@ img {
   outline: none;
   border: 2px solid rgba(46, 136, 228, 0.52);
   border-radius: 4px;
+  padding-top: 14px;
+  padding-left: 14px;
+  padding-right: 149px;
+  padding-bottom: 12px;
 }
 
 .search-form input:hover {
   outline: none;
   border: 2px solid var(--basic-input-grey);
   border-radius: 4px;
+  padding-top: 14px;
+  padding-left: 14px;
+  padding-right: 149px;
+  padding-bottom: 12px;
 }
 
 .search:hover .search-form,
@@ -445,12 +453,20 @@ img {
   outline: none;
   border: 2px solid rgba(46, 136, 228, 0.52);
   border-radius: 4px;
+  padding-left: 12px;
+  padding-top: 14px;
+  padding-bottom: 11px;
+  padding-right: 79px;
 }
 
 .entrance-form input:hover {
   outline: none;
   border: 2px solid var(--basic-input-grey);
   border-radius: 4px;
+  padding-left: 12px;
+  padding-top: 14px;
+  padding-bottom: 11px;
+  padding-right: 79px;
 }
 
 .entrance-form div {
@@ -1159,12 +1175,18 @@ img {
   outline: none;
   border: 2px solid rgba(46, 136, 228, 0.52);
   border-radius: 4px;
+  padding-left: 13px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .mailing input:hover {
   outline: none;
   border: 2px solid var(--basic-input-grey);
   border-radius: 4px;
+  padding-left: 13px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .mailing button {
@@ -1326,18 +1348,24 @@ img {
   color: var(--basic-grey);
 }
 
-.feedback-form input:focus,
-.feedback-form textarea:focus {
+.feedback-form input:focus {
   outline: none;
   border: 2px solid rgba(46, 136, 228, 0.52);
   border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 13px;
+  padding-right: 84px;
 }
 
-.feedback-form input:hover,
-.feedback-form textarea:hover {
+.feedback-form input:hover {
   outline: none;
   border: 2px solid var(--basic-input-grey);
   border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 13px;
+  padding-right: 84px;
 }
 
 .feedback-form textarea {
@@ -1350,6 +1378,26 @@ img {
   padding-bottom: 13px;
   padding-right: 14px;
   resize: none;
+}
+
+.feedback-form textarea:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-left: 13px;
+  padding-bottom: 12px;
+  padding-right: 13px;
+}
+
+.feedback-form textarea:hover {
+  outline: none;
+  border: 2px solid var(--basic-input-grey);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-left: 13px;
+  padding-bottom: 12px;
+  padding-right: 13px;
 }
 
 .feedback-form .send-button {
