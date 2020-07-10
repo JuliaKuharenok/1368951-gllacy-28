@@ -1844,7 +1844,7 @@ img {
 
 .filter-input-radio:focus + label::before {
   outline: 2px solid blue;
-  border: var(--basic-white);
+  border: 3px solid var(--basic-white);
 }
 
 .filter-input-radio:checked:focus + label::after {
@@ -2003,6 +2003,11 @@ img {
 .back-button,
 .forward-button {
   position: relative;
+}
+
+.back-button:active,
+.forward-button:active {
+  background-color: 
 }
 
 .back-button::before {
