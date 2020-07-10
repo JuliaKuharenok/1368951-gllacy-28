@@ -1299,8 +1299,7 @@ img {
   height: 100%;
   position: relative;
   z-index: 1;
-  background: #E5E5E5;
-  opacity: 0.8;
+  background: rgba(var(--basic-dark-black), 0.3);
   position: fixed;
   left: 0;
   top: 0;
@@ -1311,7 +1310,6 @@ img {
   top: 118px;
   left: 33.5%;
   z-index: 2;
-  opacity: 1;
   display: none;
   background-color: var(--basic-cream);
   width: 428px;
