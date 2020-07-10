@@ -2005,9 +2005,9 @@ img {
   position: relative;
 }
 
-.back-button:active,
-.forward-button:active {
-  background-color: 
+.back-button:focus,
+.forward-button:focus {
+  background-color: transparent;
 }
 
 .back-button::before {
