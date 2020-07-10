@@ -765,6 +765,7 @@ img {
 
 .slider-controls button:focus {
   background-color: var(--basic-white);
+  outline: none;
 }
 
 .advertisment {
@@ -821,6 +822,8 @@ img {
   display: flex;
   flex-direction: column;
   background-image: url("../img/index/malina.jpg");
+  background-position-y: -98px;
+  background-position-x: -47px; 
   width: 560px;
   background-color: #500008;
   border-radius: 16px;
