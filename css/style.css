@@ -145,6 +145,7 @@ img {
   justify-content: space-between;
   width: 100%;
   margin-left: 10px;
+  margin-bottom: 21px;
 }
 
 .container {
@@ -239,7 +240,7 @@ img {
 .catalog-items a {
   margin: 0;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 11px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 6px;
@@ -254,7 +255,7 @@ img {
   display: block;
   background-color: var(--basic-light-bordo);
   border-radius: 0;
-  padding-top: 10px;
+  padding-top: 11px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 6px;
@@ -271,7 +272,7 @@ img {
   background-color: var(--basic-bordo);
   border-radius: 0;
   box-shadow: none;
-  padding-top: 10px;
+  padding-top: 11px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 6px;
@@ -313,7 +314,7 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 5px;
+  margin-top: 11px;
   list-style: none;
   font-weight: 500;
   font-size: 14px;
@@ -1265,7 +1266,7 @@ img {
   max-width: 258px;
   border-radius: 16px;
   padding-left: 23px;
-  padding-top: 32px;
+  padding-top: 25px;
   padding-right: 25px;
   padding-bottom: 31px;
 }
@@ -1301,6 +1302,7 @@ img {
 }
 
 .contact-information .button {
+  display: block;
   color: var(--basic-white);
   font-size: 18px;
   line-height: 24px;
@@ -1629,10 +1631,11 @@ img {
 .pages-navigation a {
   display: block;
   margin-right: 22px;
+  position: relative;
 }
 
 .pages-navigation span {
-  border-bottom: 1px solid var(--basic-extra-white));
+  border-bottom: 1px solid var(--basic-extra-white);
 }
 
 .pages-navigation a:hover,
@@ -1934,7 +1937,7 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  margin-top: 23px;
+  margin-top: 24px;
   padding-left: 29px;
   padding-top: 8px;
   padding-right: 29px;
@@ -2005,8 +2008,8 @@ img {
   position: relative;
 }
 
-.back-button:focus,
-.forward-button:focus {
+.catalog-pages .back-button:active,
+.catalog-pages .forward-button:active {
   background-color: transparent;
 }
 
