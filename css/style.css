@@ -1348,8 +1348,8 @@ img {
 .feedback-form {
   position: fixed;
   top: 339px;
-  transform: translate(50%);
-  right: 50%;
+  left: 50%;
+  margin-left: -240px;
   z-index: 2;
   display: none;
   background-color: var(--basic-cream);
