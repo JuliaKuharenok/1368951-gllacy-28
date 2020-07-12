@@ -59,6 +59,7 @@ window.addEventListener("keydown", function (evt) {
     if (feedbackForm.classList.contains("popup-show")) {
       evt.preventDefault();
       feedbackForm.classList.remove("popup-show");
+      feedback.classList.remove("popup-show");
       feedbackForm.classList.remove("popup-error");
     }
   }

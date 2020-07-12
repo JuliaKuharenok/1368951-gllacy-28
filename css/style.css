@@ -49,6 +49,21 @@
   --special-header-input-grey: #D3D3D2;
   --special-links-pink: rgba(255, 188, 158, 0.3);
   --special-text-shadow: rgba(49, 50, 53, 0.5);
+  --special-price-control: #ababab;
+  --special-hover-button-shadow: #AC1000;
+  --special-active-button-shadow: #942718;
+  --special-site-navigation-background: #EDEDED;
+  --special-table-border: #CACAC7;
+  --special-table-span: #C4C4C4;
+  --special-jam-offer-background: #500008;
+  --special-about-company-background: #EEE2C9;
+  --special-blog-link: #353535;
+  --special-map-background: #F7F1D9;
+  --special-button-text-shadow: rgba(160, 32, 11, 0.76);
+  --special-button-box-shadow: rgba(172, 16, 0, 0.64);
+  --special-focus-input: rgba(46, 136, 228, 0.52);
+  --special-extra-light-white: rgba(255, 255, 255, 0.4);
+  --special-scale: rgba(248, 247, 244, 0.5);
 
   --background-green: #849D8F;
   --background-grey: #8996A6;
@@ -78,9 +93,9 @@ img {
 .button {
   text-decoration: none;
   font-weight: 600;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  text-shadow: 0px 2px 5px var(--special-button-text-shadow);
   background-image: var(--basic-red);
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  box-shadow: 0px 2px 2px var(--special-button-box-shadow);
   background-color: var(--basic-light-red);
   border-radius: 70px;
 }
@@ -90,13 +105,13 @@ img {
   color: var(--basic-white);
   background-image: linear-gradient(0deg, var(--basic-extra-white), var(--basic-extra-white)), var(--basic-red);
   background-color: var(--basic-light-red);
-  box-shadow: 0px 2px 2px #AC1000;
+  box-shadow: 0px 2px 2px var(--special-hover-button-shadow);
 }
 
 .button:active {
   color: var(--basic-white);
   background-image: linear-gradient(0deg, rgba(var(--basic-dark-black), 0.07), rgba(var(--basic-dark-black), 0.07)), var(--basic-red);
-  box-shadow: inset 0px 2px 2px #942718;
+  box-shadow: inset 0px 2px 2px var(--special-active-button-shadow);
   background-color: var(--basic-light-red);
 }
 
@@ -196,7 +211,7 @@ img {
 }
 
 .site-navigation a:active {
-  background: #EDEDED;
+  background: var(--special-site-navigation-background);
   box-shadow: inset 0px 2px 1px var(--basic-dark-grey);
   border-radius: 26px;
   padding: 8px 14px;
@@ -364,7 +379,7 @@ img {
 
 .search-form input:focus {
   outline: none;
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  border: 2px solid var(--special-focus-input);
   border-radius: 4px;
   padding-top: 14px;
   padding-left: 14px;
@@ -470,7 +485,7 @@ img {
 
 .entrance-form input:focus {
   outline: none;
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  border: 2px solid var(--special-focus-input);
   border-radius: 4px;
   padding-left: 12px;
   padding-top: 14px;
@@ -596,7 +611,7 @@ img {
 .cart-table {
   border-spacing: 6px 16px;
   width: 100%;
-  border-bottom: 1px solid #CACAC7;
+  border-bottom: 1px solid var(--special-table-border);
   color: var(--basic-black);
 }
 
@@ -609,7 +624,7 @@ img {
 }
 
 .cart-content span {
-  color: #C4C4C4;
+  color: var(--special-table-span);
 }
 
 .cart-content p {
@@ -779,7 +794,7 @@ img {
 }
 
 .slider-controls button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--special-extra-light-white);
 }
 
 .slider-controls button:focus {
@@ -844,7 +859,7 @@ img {
   background-position-y: -98px;
   background-position-x: -47px;
   width: 560px;
-  background-color: #500008;
+  background-color: var(--special-jam-offer-background);
   border-radius: 16px;
   box-sizing: border-box;
   padding-top: 16px;
@@ -1000,7 +1015,7 @@ img {
 
 .about-company {
   background-image: url("../img/index/vaffel.png");
-  background-color: #EEE2C9;
+  background-color: var(--special-about-company-background);
   background-repeat: repeat, no-repeat;
   width: 1146px;
   border-radius: 16px;
@@ -1141,7 +1156,7 @@ img {
 
 .blog a {
   color: var(--basic-black);
-  border-bottom: 2px solid #353535;
+  border-bottom: 2px solid var(--special-blog-link);
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
@@ -1196,7 +1211,7 @@ img {
 
 .mailing input:focus {
   outline: none;
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  border: 2px solid var(--special-focus-input);
   border-radius: 4px;
   padding-left: 13px;
   padding-top: 11px;
@@ -1237,7 +1252,7 @@ img {
 }
 
 .map {
-  background-color: #F7F1D9;
+  background-color: var(--special-map-background);
   background-image: url("../img/index/map.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -1254,20 +1269,22 @@ img {
 
 /* Contact Information */
 
-/*.container {
-  position: relative;
-}*/
+.contact-information-container {
+  position: absolute;
+  top: 62px;
+  transform: translate(50%);
+  right: 50%;
+}
 
 .contact-information {
   position: absolute;
-  right: 144px;
-  top: 63px;
+  right: 0;
   background-color: var(--basic-white);
   max-width: 258px;
   border-radius: 16px;
   padding-left: 23px;
   padding-top: 28px;
-  padding-right: 25px;
+  padding-right: 21px;
   padding-bottom: 31px;
 }
 
@@ -1330,8 +1347,9 @@ img {
 
 .feedback-form {
   position: fixed;
-  top: 118px;
-  left: 33.5%;
+  top: 339px;
+  transform: translate(50%);
+  right: 50%;
   z-index: 2;
   display: none;
   background-color: var(--basic-cream);
@@ -1371,7 +1389,7 @@ img {
 
 .feedback-form input:focus {
   outline: none;
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  border: 2px solid var(--special-focus-input);
   border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 11px;
@@ -1403,7 +1421,7 @@ img {
 
 .feedback-form textarea:focus {
   outline: none;
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  border: 2px solid var(--special-focus-input);
   border-radius: 4px;
   padding-top: 12px;
   padding-left: 13px;
@@ -1750,7 +1768,7 @@ img {
 
 .price-controls .scale {
   height: 2px;
-  background-color: rgba(248, 247, 244, 0.5);
+  background-color: var(--special-scale);
   width: 176px;
 }
 
@@ -1769,7 +1787,7 @@ img {
   height: 4px;
   padding: 0;
   border: 8px solid var(--basic-white);
-  background-color: #ababab;
+  background-color: var(--special-price-control);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -1854,12 +1872,12 @@ img {
 }
 
 .filter-input-radio:disabled + label::before {
-  border: 3px solid rgba(255, 255, 255, 0.4);
+  border: 3px solid var(--special-extra-light-white);
   pointer-events: none;
 }
 
 .filter-input-radio:checked:disabled + label::after {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--special-extra-light-white);
   pointer-events: none;
 }
 
