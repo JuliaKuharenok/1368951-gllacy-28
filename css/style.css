@@ -856,9 +856,10 @@ img {
   display: flex;
   flex-direction: column;
   background-image: url("../img/index/malina.jpg");
-  background-size: cover;
-  /*background-position-y: -98px;
-  background-position-x: -47px;*/
+  object-fit: cover;
+  /*background-size: cover;*/
+  background-position-y: -98px;
+  background-position-x: -47px;
   width: 560px;
   background-color: var(--special-jam-offer-background);
   border-radius: 16px;
