@@ -857,7 +857,6 @@ img {
   flex-direction: column;
   background-image: url("../img/index/malina.jpg");
   object-fit: cover;
-  /*background-size: cover;*/
   background-position-y: -98px;
   background-position-x: -47px;
   width: 560px;
@@ -883,7 +882,7 @@ img {
   display: flex;
   flex-direction: column;
   background-image: url("../img/index/chokolate.jpg");
-  background-size: cover;
+  object-fit: cover;
   width: 560px;
   background-color: 2E140A;
   border-radius: 16px;
