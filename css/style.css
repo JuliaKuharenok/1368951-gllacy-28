@@ -172,8 +172,12 @@ img {
 /* Navigation */
 
 .main-header-logo {
-  width: 180px;
+  width: 210px;
   height: 64px;
+}
+
+.main-header {
+  display: flex;
 }
 
 .site-navigation {
@@ -335,6 +339,13 @@ img {
   font-size: 14px;
   line-height: 16px;
   max-width: 600px;
+}
+
+.user-menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-top: 12px;
 }
 
 .user-navigation li {
@@ -707,6 +718,7 @@ img {
   font-size: 14px;
   line-height: 16px;
   margin: 0;
+  margin-top: 21px;
 }
 
 .open-hours p {
