@@ -56,6 +56,7 @@
   --special-table-border: #CACAC7;
   --special-table-span: #C4C4C4;
   --special-jam-offer-background: #500008;
+  --special-chokolate-offer-background: #2E140A;
   --special-about-company-background: #EEE2C9;
   --special-blog-link: #353535;
   --special-map-background: #F7F1D9;
@@ -855,6 +856,8 @@ img {
   line-height: 41px;
   margin: 0;
   margin-bottom: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
 }
 
 .offers-list p {
@@ -862,23 +865,31 @@ img {
   font-size: 18px;
   line-height: 22px;
   margin: 0;
+  padding-left: 16px;
 }
 
 .jam-offer {
   display: flex;
   flex-direction: column;
-  background-image: url("../img/index/malina.jpg");
-  object-fit: cover;
-  background-position-y: -98px;
-  background-position-x: -47px;
   width: 560px;
+  min-height: 229px;
   background-color: var(--special-jam-offer-background);
   border-radius: 16px;
   box-sizing: border-box;
-  padding-top: 16px;
-  padding-left: 16px;
   padding-right: 22px;
   padding-bottom: 22px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.jam-offer-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  z-index: -1;
 }
 
 .jam-offer .button {
@@ -893,16 +904,24 @@ img {
 .chokolate-offer {
   display: flex;
   flex-direction: column;
-  background-image: url("../img/index/chokolate.jpg");
-  object-fit: cover;
   width: 560px;
-  background-color: 2E140A;
+  background-color: var(--special-chokolate-offer-background);
   border-radius: 16px;
   box-sizing: border-box;
-  padding-top: 16px;
-  padding-left: 16px;
   padding-right: 22px;
   padding-bottom: 22px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.chokolate-offer-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  z-index: -1;
 }
 
 .chokolate-offer .button {
